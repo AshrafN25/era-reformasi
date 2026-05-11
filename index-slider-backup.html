@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reformasi Indonesia 1998 — Sejarah Perubahan Bangsa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="home-nav">
+  <a class="home-nav-logo" href="#">
+    <span class="logo-main">Reformasi</span>
+    <span class="logo-sub">Indonesia 1998</span>
+  </a>
+  <div class="home-nav-center">
+    <div class="accent-line"></div>
+  </div>
+  <ul class="home-nav-links">
+    <li><a href="detail.html#latar">Latar Belakang</a></li>
+    <li><a href="detail.html#timeline">Kronologi</a></li>
+    <li><a href="detail.html#tokoh">Tokoh</a></li>
+    <li><a href="detail.html#kesimpulan">Refleksi</a></li>
+  </ul>
+</nav>
+
+<!-- SLIDER -->
+<div class="slider" id="slider">
+
+  <!-- SLIDE 1: Orde Baru -->
+  <div class="slide active" data-index="0">
+    <div class="slide-bg" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Soeharto_1993.jpg/800px-Soeharto_1993.jpg');"></div>
+    <div class="slide-overlay"></div>
+    <div class="slide-content">
+      <div class="slide-num">01</div>
+      <div class="slide-eyebrow">1966 &ndash; 1998</div>
+      <h1 class="slide-title">Tiga Dekade<br>Orde Baru</h1>
+      <p class="slide-desc">Soeharto berkuasa selama 32 tahun dengan sistem sentralistik, penuh KKN, dan menutup ruang kebebasan rakyat. Dwifungsi ABRI, pembredelan pers, dan Golkar yang tak pernah kalah menjadi pilar kekuasaannya.</p>
+      <div class="slide-thumbs">
+        <img class="thumb active-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Soeharto_1993.jpg/200px-Soeharto_1993.jpg" alt="Soeharto" data-slide="0">
+        <img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Jakarta_Skyline_2017.jpg/320px-Jakarta_Skyline_2017.jpg" alt="Jakarta" data-slide="1">
+        <img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Trisakti_shooting_victims.jpg/320px-Trisakti_shooting_victims.jpg" alt="Trisakti" data-slide="2">
+        <div class="thumb-nav">
+          <button class="thumb-btn" id="prev-btn">
+            <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+            PREV
+          </button>
+          <button class="thumb-btn" id="next-btn">
+            NEXT
+            <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
+          </button>
+        </div>
+      </div>
+      <a class="slide-cta" href="detail.html#latar">
+        <svg viewBox="0 0 24 24"><polyline points="7 13 12 18 17 13"/><polyline points="7 6 12 11 17 6"/></svg>
+        Pelajari Lebih Lanjut
+      </a>
+    </div>
+    <div class="slide-chapters">
+      <ul class="chapter-list">
+        <li data-goto="0">Orde Baru</li>
+        <li data-goto="1">Krisis Moneter</li>
+        <li data-goto="2" class="current">Tragedi Trisakti &bull;</li>
+        <li data-goto="3">21 Mei 1998</li>
+        <li data-goto="4">Era Baru</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SLIDE 2: Krisis Moneter -->
+  <div class="slide" data-index="1">
+    <div class="slide-bg" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Jakarta_Skyline_2017.jpg/1200px-Jakarta_Skyline_2017.jpg'); filter: brightness(0.35) sepia(0.3);"></div>
+    <div class="slide-overlay"></div>
+    <div class="slide-content">
+      <div class="slide-num">02</div>
+      <div class="slide-eyebrow">1997 &ndash; 1998</div>
+      <h1 class="slide-title">Badai<br>Krisis Moneter</h1>
+      <p class="slide-desc">Rupiah anjlok dari Rp 2.400 menjadi Rp 17.000 per dolar. Enam belas bank ditutup, PHK massal melanda, harga sembako naik 300%. Fondasi ekonomi Orde Baru runtuh dalam hitungan bulan.</p>
+      <div class="slide-thumbs">
+        <img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Soeharto_1993.jpg/200px-Soeharto_1993.jpg" alt="Soeharto" data-slide="0">
+        <img class="thumb active-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Jakarta_Skyline_2017.jpg/320px-Jakarta_Skyline_2017.jpg" alt="Jakarta" data-slide="1">
+        <img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Trisakti_shooting_victims.jpg/320px-Trisakti_shooting_victims.jpg" alt="Trisakti" data-slide="2">
+        <div class="thumb-nav">
+          <button class="thumb-btn" data-prev>
+            <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+            PREV
+          </button>
+          <button class="thumb-btn" data-next>
+            NEXT
+            <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
+          </button>
+        </div>
+      </div>
+      <a class="slide-cta" href="detail.html#latar">
+        <svg viewBox="0 0 24 24"><polyline points="7 13 12 18 17 13"/><polyline points="7 6 12 11 17 6"/></svg>
+        Pelajari Lebih Lanjut
+      </a>
+    </div>
+    <div class="slide-chapters">
+      <ul class="chapter-list">
+        <li data-goto="0">Orde Baru</li>
+        <li data-goto="1" class="current">Krisis Moneter &bull;</li>
+        <li data-goto="2">Tragedi Trisakti</li>
+        <li data-goto="3">21 Mei 1998</li>
+        <li data-goto="4">Era Baru</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SLIDE 3: Tragedi Trisakti -->
+  <div class="slide" data-index="2">
+    <div class="slide-bg" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Trisakti_shooting_victims.jpg/1200px-Trisakti_shooting_victims.jpg');"></div>
+    <div class="slide-overlay"></div>
+    <div class="slide-content">
+      <div class="slide-num">03</div>
+      <div class="slide-eyebrow">12 Mei 1998</div>
+      <h1 class="slide-title">Tragedi<br>Trisakti</h1>
+      <p class="slide-desc">Empat mahasiswa gugur ditembak aparat saat berdemonstrasi damai. Elang Mulia Lesmana, Heri Hertanto, Hafidin Royan, dan Hendriawan Sie &mdash; nama-nama yang menjadi simbol perjuangan reformasi.</p>
+      <div class="slide-thumbs">
+        <img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Soeharto_1993.jpg/200px-Soeharto_1993.jpg" alt="Soeharto" data-slide="0">
+        <img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Jakarta_Skyline_2017.jpg/320px-Jakarta_Skyline_2017.jpg" alt="Jakarta" data-slide="1">
+        <img class="thumb active-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Trisakti_shooting_victims.jpg/320px-Trisakti_shooting_victims.jpg" alt="Trisakti" data-slide="2">
+        <div class="thumb-nav">
+          <button class="thumb-btn" data-prev>
+            <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+            PREV
+          </button>
+          <button class="thumb-btn" data-next>
+            NEXT
+            <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
+          </button>
+        </div>
+      </div>
+      <a class="slide-cta" href="detail.html#latar">
+        <svg viewBox="0 0 24 24"><polyline points="7 13 12 18 17 13"/><polyline points="7 6 12 11 17 6"/></svg>
+        Pelajari Lebih Lanjut
+      </a>
+    </div>
+    <div class="slide-chapters">
+      <ul class="chapter-list">
+        <li data-goto="0">Orde Baru</li>
+        <li data-goto="1">Krisis Moneter</li>
+        <li data-goto="2" class="current">Tragedi Trisakti &bull;</li>
+        <li data-goto="3">21 Mei 1998</li>
+        <li data-goto="4">Era Baru</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SLIDE 4: 21 Mei 1998 -->
+  <div class="slide" data-index="3">
+    <div class="slide-bg" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Soeharto_resignation.jpg/1200px-Soeharto_resignation.jpg');"></div>
+    <div class="slide-overlay"></div>
+    <div class="slide-content">
+      <div class="slide-num">04</div>
+      <div class="slide-eyebrow">21 Mei 1998 &mdash; 09:00 WIB</div>
+      <h1 class="slide-title">Soeharto<br>Mengundurkan Diri</h1>
+      <p class="slide-desc">Di Istana Merdeka, setelah 32 tahun berkuasa, Soeharto menyampaikan pengunduran dirinya. B.J. Habibie langsung dilantik sebagai Presiden ke-3 RI. Sebuah era berakhir, era baru dimulai.</p>
+      <div class="slide-thumbs">
+        <img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Soeharto_1993.jpg/200px-Soeharto_1993.jpg" alt="Soeharto" data-slide="0">
+        <img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Jakarta_Skyline_2017.jpg/320px-Jakarta_Skyline_2017.jpg" alt="Jakarta" data-slide="1">
+        <img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Trisakti_shooting_victims.jpg/320px-Trisakti_shooting_victims.jpg" alt="Trisakti" data-slide="2">
+        <div class="thumb-nav">
+          <button class="thumb-btn" data-prev>
+            <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+            PREV
+          </button>
+          <button class="thumb-btn" data-next>
+            NEXT
+            <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
+          </button>
+        </div>
+      </div>
+      <a class="slide-cta" href="detail.html#timeline">
+        <svg viewBox="0 0 24 24"><polyline points="7 13 12 18 17 13"/><polyline points="7 6 12 11 17 6"/></svg>
+        Lihat Kronologi Lengkap
+      </a>
+    </div>
+    <div class="slide-chapters">
+      <ul class="chapter-list">
+        <li data-goto="0">Orde Baru</li>
+        <li data-goto="1">Krisis Moneter</li>
+        <li data-goto="2">Tragedi Trisakti</li>
+        <li data-goto="3" class="current">21 Mei 1998 &bull;</li>
+        <li data-goto="4">Era Baru</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SLIDE 5: Era Baru -->
+  <div class="slide" data-index="4">
+    <div class="slide-bg" style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Gedung_DPR_MPR_RI.jpg/1200px-Gedung_DPR_MPR_RI.jpg');"></div>
+    <div class="slide-overlay"></div>
+    <div class="slide-content">
+      <div class="slide-num">05</div>
+      <div class="slide-eyebrow">1999 &ndash; Sekarang</div>
+      <h1 class="slide-title">Fajar<br>Demokrasi</h1>
+      <p class="slide-desc">Pemilu bebas 1999 diikuti 48 partai. Amandemen UUD 1945, penghapusan Dwifungsi ABRI, otonomi daerah, kebebasan pers &mdash; Indonesia bertransformasi menjadi demokrasi terbesar ketiga di dunia.</p>
+      <div class="slide-thumbs">
+        <img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Soeharto_1993.jpg/200px-Soeharto_1993.jpg" alt="Soeharto" data-slide="0">
+        <img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Jakarta_Skyline_2017.jpg/320px-Jakarta_Skyline_2017.jpg" alt="Jakarta" data-slide="1">
+        <img class="thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Trisakti_shooting_victims.jpg/320px-Trisakti_shooting_victims.jpg" alt="Trisakti" data-slide="2">
+        <div class="thumb-nav">
+          <button class="thumb-btn" data-prev>
+            <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+            PREV
+          </button>
+          <button class="thumb-btn" data-next>
+            NEXT
+            <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
+          </button>
+        </div>
+      </div>
+      <a class="slide-cta" href="detail.html#hasil">
+        <svg viewBox="0 0 24 24"><polyline points="7 13 12 18 17 13"/><polyline points="7 6 12 11 17 6"/></svg>
+        Lihat Hasil Reformasi
+      </a>
+    </div>
+    <div class="slide-chapters">
+      <ul class="chapter-list">
+        <li data-goto="0">Orde Baru</li>
+        <li data-goto="1">Krisis Moneter</li>
+        <li data-goto="2">Tragedi Trisakti</li>
+        <li data-goto="3">21 Mei 1998</li>
+        <li data-goto="4" class="current">Era Baru &bull;</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Progress bar -->
+  <div class="slider-progress" id="progress"></div>
+
+  <!-- Dot navigation -->
+  <div class="slide-counter">
+    <div class="counter-dots" id="dots">
+      <div class="counter-dot active" data-dot="0"></div>
+      <div class="counter-dot" data-dot="1"></div>
+      <div class="counter-dot" data-dot="2"></div>
+      <div class="counter-dot" data-dot="3"></div>
+      <div class="counter-dot" data-dot="4"></div>
+    </div>
+  </div>
+
+  <!-- Keyboard hint -->
+  <div class="keyboard-hint">
+    <span class="key">&larr;</span>
+    <span class="key">&rarr;</span>
+    NAVIGATE
+  </div>
+
+</div><!-- /slider -->
+
+<script src="js/slider.js"></script>
+</body>
+</html>

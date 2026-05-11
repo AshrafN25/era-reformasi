@@ -1,0 +1,140 @@
+/* ─── BAB 1: LATAR BELAKANG ─── */
+#latar {
+  background: var(--cream);
+}
+
+/* Three-column card grid */
+.three-col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2px;
+  margin-top: 3rem;
+}
+
+.bg-card {
+  background: var(--primary-xlight);
+  padding: 2.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s;
+}
+
+.bg-card:hover {
+  background: var(--primary-light);
+}
+
+.bg-card-num {
+  font-family: var(--ff-display);
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--primary-light);
+  line-height: 1;
+  margin-bottom: 1rem;
+  user-select: none;
+}
+
+.bg-card h3 {
+  font-family: var(--ff-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.bg-card p {
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+  line-height: 1.75;
+}
+
+.bg-card ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.bg-card ul li {
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--primary-light);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  line-height: 1.5;
+}
+
+.bg-card ul li::before {
+  content: '—';
+  color: var(--gold);
+  flex-shrink: 0;
+  margin-top: 0.05em;
+}
+
+/* Crisis stat badge */
+.crisis-stat {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  margin: 0.75rem 0;
+  padding: 0.75rem 1.25rem;
+  background: var(--primary-dark);
+  color: var(--cream);
+  border-radius: 2px;
+}
+
+.crisis-stat .big {
+  font-family: var(--ff-display);
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--gold-light);
+}
+
+.crisis-stat .label {
+  font-size: 0.8rem;
+  font-family: var(--ff-mono);
+  letter-spacing: 0.05em;
+  opacity: 0.75;
+}
+
+/* Tragedi Trisakti block */
+.tragedi-block {
+  margin: 4rem 0 0;
+  border-left: 4px solid var(--red-accent);
+  padding: 2rem 2.5rem;
+  background: rgba(139, 32, 32, 0.05);
+}
+
+.tragedi-block h3 {
+  font-family: var(--ff-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--red-accent);
+  margin-bottom: 0.5rem;
+}
+
+.tragedi-block .date {
+  font-family: var(--ff-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  color: var(--red-accent);
+  opacity: 0.7;
+  margin-bottom: 1rem;
+}
+
+.martir-names {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.martir-names span {
+  font-family: var(--ff-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.3rem 0.9rem;
+  border: 1px solid rgba(139, 32, 32, 0.4);
+  color: var(--red-accent);
+  border-radius: 1px;
+}

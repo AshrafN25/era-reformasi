@@ -1,0 +1,89 @@
+/* ─── BAB 5: DAMPAK ─── */
+#dampak {
+  background: var(--primary-dark);
+}
+
+#dampak .section-heading {
+  color: var(--cream);
+}
+
+#dampak .section-label {
+  color: var(--gold-light);
+}
+
+#dampak .section-label::after {
+  background: var(--gold-light);
+}
+
+#dampak .lead-text {
+  color: rgba(250, 247, 242, 0.6);
+}
+
+.dampak-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin-top: 3rem;
+}
+
+@media (max-width: 600px) {
+  .dampak-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dampak-col {
+  padding: 2.5rem 2rem;
+}
+
+.dampak-col.positif {
+  background: rgba(42, 92, 63, 0.4);
+}
+
+.dampak-col.negatif {
+  background: rgba(139, 32, 32, 0.3);
+}
+
+.dampak-col h3 {
+  font-family: var(--ff-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dampak-col.positif h3 {
+  color: #6ECEA0;
+}
+
+.dampak-col.negatif h3 {
+  color: #E58E8E;
+}
+
+.dampak-col ul {
+  list-style: none;
+}
+
+.dampak-col ul li {
+  font-size: 0.92rem;
+  color: rgba(250, 247, 242, 0.7);
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  gap: 0.75rem;
+  line-height: 1.55;
+  align-items: flex-start;
+}
+
+.dampak-col.positif ul li::before {
+  content: '+';
+  color: #6ECEA0;
+  font-weight: bold;
+}
+
+.dampak-col.negatif ul li::before {
+  content: '−';
+  color: #E58E8E;
+  font-weight: bold;
+}

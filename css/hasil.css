@@ -1,0 +1,58 @@
+/* ─── BAB 4: HASIL PERUBAHAN ─── */
+#hasil {
+  background: var(--cream);
+}
+
+.hasil-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2px;
+  margin-top: 3rem;
+}
+
+.hasil-item {
+  padding: 2rem;
+  background: var(--primary-xlight);
+  border-top: 3px solid var(--primary);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.hasil-item:hover {
+  transform: translateY(-4px);
+  background: var(--primary-light);
+}
+
+.hasil-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: block;
+  line-height: 1;
+}
+
+.hasil-item h3 {
+  font-family: var(--ff-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin-bottom: 0.75rem;
+}
+
+.hasil-item ul {
+  list-style: none;
+}
+
+.hasil-item ul li {
+  font-size: 0.88rem;
+  color: var(--ink-muted);
+  padding: 0.35rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  gap: 0.6rem;
+  line-height: 1.5;
+}
+
+.hasil-item ul li::before {
+  content: '✓';
+  color: var(--green-accent);
+  flex-shrink: 0;
+}

@@ -1,0 +1,72 @@
+/* ─── BAB 7: KESIMPULAN & REFLEKSI ─── */
+#kesimpulan {
+  background: var(--cream);
+}
+
+.nilai-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2px;
+  margin-top: 2.5rem;
+}
+
+.nilai-card {
+  padding: 2rem 1.5rem;
+  background: var(--primary-xlight);
+  text-align: center;
+  transition: background 0.25s, transform 0.25s;
+}
+
+.nilai-card:hover {
+  background: var(--primary-light);
+  transform: translateY(-5px);
+}
+
+.nilai-icon {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.nilai-card h4 {
+  font-family: var(--ff-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin-bottom: 0.5rem;
+}
+
+.nilai-card p {
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  line-height: 1.6;
+}
+
+/* Quote block */
+.quote-block {
+  margin: 4rem auto 0;
+  max-width: 720px;
+  border-left: 4px solid var(--gold);
+  padding: 2.5rem 3rem;
+  background: var(--primary-dark);
+  border-radius: 2px;
+}
+
+.quote-block blockquote {
+  font-family: var(--ff-display);
+  font-size: 1.35rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--cream);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.quote-block cite {
+  font-family: var(--ff-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  font-style: normal;
+}

@@ -1,0 +1,116 @@
+/* ─── BAB 6: ERA PRESIDEN ─── */
+#presiden {
+  background: var(--cream-dark);
+}
+
+.presiden-list {
+  margin-top: 3rem;
+}
+
+.presiden-item {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 0;
+  margin-bottom: 2px;
+  background: var(--cream);
+  transition: background 0.2s;
+}
+
+.presiden-item:hover {
+  background: #fff;
+}
+
+.presiden-sidebar {
+  background: var(--primary);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.presiden-num {
+  font-family: var(--ff-display);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--primary-light);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.presiden-name {
+  font-family: var(--ff-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--cream);
+  line-height: 1.2;
+  margin-bottom: 0.4rem;
+}
+
+.presiden-period {
+  font-family: var(--ff-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--gold-light);
+}
+
+.presiden-body {
+  padding: 2rem;
+}
+
+.presiden-body .prestasi h4 {
+  font-family: var(--ff-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--green-accent);
+  margin-bottom: 0.75rem;
+}
+
+.presiden-body .kelemahan h4 {
+  font-family: var(--ff-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--red-accent);
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.presiden-body ul {
+  list-style: none;
+}
+
+.presiden-body ul li {
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+  padding: 0.3rem 0;
+  display: flex;
+  gap: 0.6rem;
+  line-height: 1.55;
+  align-items: flex-start;
+}
+
+.presiden-body .prestasi ul li::before {
+  content: '✓';
+  color: var(--green-accent);
+  flex-shrink: 0;
+}
+
+.presiden-body .kelemahan ul li::before {
+  content: '✗';
+  color: var(--red-accent);
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .presiden-item {
+    grid-template-columns: 1fr;
+  }
+
+  .presiden-sidebar {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+  }
+}
