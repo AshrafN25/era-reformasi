@@ -1,89 +1,45 @@
-/* ─── BAB 5: DAMPAK ─── */
-#dampak {
-  background: var(--primary-dark);
-}
-
-#dampak .section-heading {
-  color: var(--cream);
-}
-
-#dampak .section-label {
-  color: var(--gold-light);
-}
-
-#dampak .section-label::after {
-  background: var(--gold-light);
-}
-
-#dampak .lead-text {
-  color: rgba(250, 247, 242, 0.6);
-}
+﻿/* ================================================================
+   BAB 3: DAMPAK — Split screen 50/50 large text
+   ================================================================ */
+#dampak { background: var(--s900); padding: 7rem 0; }
+#dampak .container-wide { padding: 0 2rem; }
+#dampak .section-heading { color: var(--y400); }
+#dampak .section-heading em { color: var(--n100); font-style: italic; }
+#dampak .lead-text { color: var(--on-dark-dim); }
 
 .dampak-cols {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2px;
+  gap: 0;
   margin-top: 3rem;
 }
+@media (max-width: 640px) { .dampak-cols { grid-template-columns: 1fr; } }
 
-@media (max-width: 600px) {
-  .dampak-cols {
-    grid-template-columns: 1fr;
-  }
-}
-
-.dampak-col {
-  padding: 2.5rem 2rem;
-}
-
-.dampak-col.positif {
-  background: rgba(42, 92, 63, 0.4);
-}
-
-.dampak-col.negatif {
-  background: rgba(139, 32, 32, 0.3);
-}
+.dampak-col { padding: 3rem 2.5rem; }
+.dampak-col.positif { background: oklch(38% 0.10 155 / 0.12); border-top: 3px solid var(--green); }
+.dampak-col.negatif { background: oklch(40% 0.12 22 / 0.12); border-top: 3px solid var(--red); border-left: 1px solid oklch(97% 0 0 / 0.05); }
 
 .dampak-col h3 {
   font-family: var(--ff-display);
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 600;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid oklch(97% 0 0 / 0.08);
 }
+.dampak-col.positif h3 { color: oklch(65% 0.14 155); }
+.dampak-col.negatif h3 { color: oklch(65% 0.14 22); }
 
-.dampak-col.positif h3 {
-  color: #6ECEA0;
-}
-
-.dampak-col.negatif h3 {
-  color: #E58E8E;
-}
-
-.dampak-col ul {
-  list-style: none;
-}
-
+.dampak-col ul { list-style: none; }
 .dampak-col ul li {
   font-size: 0.92rem;
-  color: rgba(250, 247, 242, 0.7);
-  padding: 0.6rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--on-dark-dim);
+  padding: 0.65rem 0;
+  border-bottom: 1px solid oklch(97% 0 0 / 0.06);
   display: flex;
   gap: 0.75rem;
-  line-height: 1.55;
+  line-height: 1.6;
   align-items: flex-start;
 }
-
-.dampak-col.positif ul li::before {
-  content: '+';
-  color: #6ECEA0;
-  font-weight: bold;
-}
-
-.dampak-col.negatif ul li::before {
-  content: '−';
-  color: #E58E8E;
-  font-weight: bold;
-}
+.dampak-col.positif ul li::before { content: '+'; color: oklch(65% 0.14 155); font-weight: 700; flex-shrink: 0; font-family: var(--ff-mono); }
+.dampak-col.negatif ul li::before { content: '\2212'; color: oklch(65% 0.14 22); font-weight: 700; flex-shrink: 0; font-family: var(--ff-mono); }

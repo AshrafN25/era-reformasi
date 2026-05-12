@@ -1,0 +1,274 @@
+﻿/* ================================================================
+   SECTION LAYOUTS — Unique per bab
+   ================================================================ */
+
+/* ── BAB 4: DEMOKRASI — Dark, large pull-quote + 3 prinsip ── */
+#demokrasi { background: var(--s800); padding: 7rem 2rem; }
+#demokrasi .section-heading { color: var(--y400); }
+#demokrasi .section-heading em { color: var(--n100); font-style: italic; }
+
+.demokrasi-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  margin-top: 3rem;
+  align-items: start;
+}
+.demokrasi-quote {
+  position: sticky;
+  top: 5rem;
+}
+.demokrasi-quote blockquote {
+  font-family: var(--ff-display);
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-style: italic;
+  color: var(--y400);
+  line-height: 1.5;
+  border-left: 3px solid var(--y600);
+  padding-left: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+.demokrasi-quote cite {
+  font-family: var(--ff-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  color: var(--t400);
+  text-transform: uppercase;
+}
+.demokrasi-prinsip { display: flex; flex-direction: column; gap: 2px; }
+.prinsip-item {
+  background: oklch(97% 0 0 / 0.04);
+  padding: 1.75rem 2rem;
+  border-left: 2px solid oklch(68.1% 0.162 75.834 / 0.25);
+  transition: border-left-color 0.25s, background 0.25s;
+}
+.prinsip-item:hover { border-left-color: var(--y600); background: oklch(97% 0 0 / 0.07); }
+.prinsip-num { font-family: var(--ff-mono); font-size: 0.6rem; letter-spacing: 0.2em; color: var(--y600); margin-bottom: 0.5rem; }
+.prinsip-item h3 { font-family: var(--ff-display); font-size: 1.2rem; font-weight: 600; color: var(--y400); margin-bottom: 0.5rem; }
+.prinsip-item p { font-size: 0.88rem; color: var(--on-dark-dim); line-height: 1.7; }
+.prinsip-item ul { list-style: none; margin-top: 0.75rem; }
+.prinsip-item ul li { font-size: 0.84rem; color: var(--on-dark-dim); padding: 0.3rem 0; border-bottom: 1px solid oklch(97% 0 0 / 0.06); display: flex; gap: 0.5rem; line-height: 1.5; }
+.prinsip-item ul li::before { content: '—'; color: var(--y600); flex-shrink: 0; font-family: var(--ff-mono); font-size: 0.75rem; }
+@media (max-width: 768px) { .demokrasi-layout { grid-template-columns: 1fr; gap: 3rem; } .demokrasi-quote { position: static; } }
+
+/* ── BAB 5: AMANDEMEN — Light, numbered accordion list + sidebar ── */
+#amandemen { background: var(--n100); padding: 7rem 2rem; }
+#amandemen .section-heading { color: var(--y600); }
+#amandemen .section-heading em { color: var(--ink); font-style: italic; }
+
+.amandemen-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 5rem;
+  margin-top: 3rem;
+  align-items: start;
+}
+.amandemen-list { display: flex; flex-direction: column; gap: 0; }
+.amandemen-item {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 0;
+  border-bottom: 1px solid var(--t200);
+  padding: 1.75rem 0;
+  transition: background 0.2s;
+}
+.amandemen-item:first-child { border-top: 1px solid var(--t200); }
+.amandemen-num {
+  font-family: var(--ff-display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--y600);
+  line-height: 1;
+  opacity: 0.35;
+  padding-top: 0.1rem;
+}
+.amandemen-body h3 { font-family: var(--ff-display); font-size: 1.2rem; font-weight: 600; color: var(--ink); margin-bottom: 0.4rem; }
+.amandemen-body p { font-size: 0.88rem; color: var(--ink-muted); line-height: 1.7; }
+.amandemen-body .pasal { font-family: var(--ff-mono); font-size: 0.6rem; letter-spacing: 0.15em; color: var(--t600); text-transform: uppercase; margin-bottom: 0.35rem; }
+
+.amandemen-sidebar { position: sticky; top: 5rem; }
+.amandemen-sidebar-card {
+  background: var(--s900);
+  padding: 2rem 1.75rem;
+  margin-bottom: 2px;
+}
+.amandemen-sidebar-card h4 { font-family: var(--ff-display); font-size: 1rem; font-weight: 600; color: var(--y400); margin-bottom: 0.5rem; }
+.amandemen-sidebar-card p { font-size: 0.83rem; color: var(--on-dark-dim); line-height: 1.65; }
+.amandemen-sidebar-card .big-num { font-family: var(--ff-display); font-size: 3rem; font-weight: 700; color: var(--y600); line-height: 1; margin-bottom: 0.25rem; }
+@media (max-width: 900px) { .amandemen-layout { grid-template-columns: 1fr; } .amandemen-sidebar { position: static; } }
+
+/* ── BAB 6: PEMILU — Taupe, 3 milestone cards besar dengan tahun ── */
+#pemilu { background: var(--t50); padding: 7rem 2rem; }
+#pemilu .section-heading { color: var(--y600); }
+#pemilu .section-heading em { color: var(--ink); font-style: italic; }
+
+.pemilu-milestones {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin-top: 3rem;
+}
+.milestone-card {
+  background: var(--n100);
+  padding: 2.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.25s;
+}
+.milestone-card:hover { background: #fff; }
+.milestone-year {
+  font-family: var(--ff-display);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 700;
+  color: var(--y600);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+.milestone-card h3 { font-family: var(--ff-display); font-size: 1.25rem; font-weight: 600; color: var(--ink); margin-bottom: 0.75rem; line-height: 1.2; }
+.milestone-card p { font-size: 0.88rem; color: var(--ink-muted); line-height: 1.7; margin-bottom: 1rem; }
+.milestone-card ul { list-style: none; }
+.milestone-card ul li { font-size: 0.83rem; color: var(--ink-muted); padding: 0.3rem 0; border-bottom: 1px solid var(--t100); display: flex; gap: 0.5rem; line-height: 1.5; }
+.milestone-card ul li::before { content: '—'; color: var(--y600); flex-shrink: 0; }
+
+.pemilu-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin-top: 2px;
+}
+.pemilu-bottom-card {
+  background: var(--s900);
+  padding: 2rem 2rem;
+}
+.pemilu-bottom-card h3 { font-family: var(--ff-display); font-size: 1.1rem; font-weight: 600; color: var(--y400); margin-bottom: 0.75rem; }
+.pemilu-bottom-card ul { list-style: none; }
+.pemilu-bottom-card ul li { font-size: 0.85rem; color: var(--on-dark-dim); padding: 0.35rem 0; border-bottom: 1px solid oklch(97% 0 0 / 0.06); display: flex; gap: 0.5rem; line-height: 1.5; }
+.pemilu-bottom-card ul li::before { content: '—'; color: var(--y600); flex-shrink: 0; font-family: var(--ff-mono); font-size: 0.75rem; }
+@media (max-width: 768px) { .pemilu-milestones { grid-template-columns: 1fr; } .pemilu-bottom { grid-template-columns: 1fr; } }
+
+/* ── BAB 7: PERS — Dark, 2+1 asymmetric layout ── */
+#pers { background: var(--s900); padding: 7rem 2rem; }
+#pers .section-heading { color: var(--y400); }
+#pers .section-heading em { color: var(--n100); font-style: italic; }
+
+.pers-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 2px;
+  margin-top: 3rem;
+}
+.pers-card {
+  background: oklch(97% 0 0 / 0.04);
+  padding: 2rem 1.75rem;
+  border-top: 2px solid oklch(68.1% 0.162 75.834 / 0.25);
+  transition: background 0.25s, border-top-color 0.25s;
+}
+.pers-card:hover { background: oklch(97% 0 0 / 0.08); border-top-color: var(--y600); }
+.pers-card.featured {
+  grid-column: span 2;
+  background: oklch(68.1% 0.162 75.834 / 0.08);
+  border-top-color: var(--y600);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+.pers-card h3 { font-family: var(--ff-display); font-size: 1.15rem; font-weight: 600; color: var(--y400); margin-bottom: 0.65rem; }
+.pers-card.featured h3 { font-size: 1.5rem; }
+.pers-card p { font-size: 0.87rem; color: var(--on-dark-dim); line-height: 1.7; }
+.pers-card ul { list-style: none; margin-top: 0.75rem; }
+.pers-card ul li { font-size: 0.84rem; color: var(--on-dark-dim); padding: 0.3rem 0; border-bottom: 1px solid oklch(97% 0 0 / 0.06); display: flex; gap: 0.5rem; line-height: 1.5; }
+.pers-card ul li::before { content: '—'; color: var(--y600); flex-shrink: 0; font-family: var(--ff-mono); font-size: 0.75rem; }
+.pers-card .pers-stat { font-family: var(--ff-display); font-size: 3.5rem; font-weight: 700; color: var(--y600); line-height: 1; margin-bottom: 0.25rem; }
+.pers-card .pers-stat-label { font-family: var(--ff-mono); font-size: 0.62rem; letter-spacing: 0.15em; color: var(--t400); text-transform: uppercase; }
+@media (max-width: 768px) { .pers-layout { grid-template-columns: 1fr; } .pers-card.featured { grid-column: span 1; grid-template-columns: 1fr; } }
+
+/* ── BAB 8: ABRI — Light, before/after comparison ── */
+#abri { background: var(--n100); padding: 7rem 2rem; }
+#abri .section-heading { color: var(--y600); }
+#abri .section-heading em { color: var(--ink); font-style: italic; }
+
+.abri-compare {
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr;
+  gap: 0;
+  margin-top: 3rem;
+  align-items: stretch;
+}
+.abri-before, .abri-after {
+  padding: 2.5rem 2rem;
+}
+.abri-before { background: oklch(40% 0.12 22 / 0.05); border-top: 3px solid var(--red); }
+.abri-after  { background: oklch(38% 0.10 155 / 0.06); border-top: 3px solid var(--green); }
+.abri-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--t50);
+  position: relative;
+}
+.abri-divider::after {
+  content: 'vs';
+  font-family: var(--ff-display);
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--t400);
+  writing-mode: vertical-rl;
+  letter-spacing: 0.1em;
+}
+.abri-before h3 { font-family: var(--ff-display); font-size: 1.2rem; font-weight: 600; color: var(--red); margin-bottom: 1.25rem; }
+.abri-after h3  { font-family: var(--ff-display); font-size: 1.2rem; font-weight: 600; color: var(--green); margin-bottom: 1.25rem; }
+.abri-before ul, .abri-after ul { list-style: none; }
+.abri-before ul li, .abri-after ul li { font-size: 0.9rem; color: var(--ink-muted); padding: 0.55rem 0; border-bottom: 1px solid oklch(0% 0 0 / 0.06); display: flex; gap: 0.6rem; line-height: 1.55; align-items: flex-start; }
+.abri-before ul li::before { content: '✗'; color: var(--red); font-weight: 700; flex-shrink: 0; font-family: var(--ff-mono); }
+.abri-after  ul li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; font-family: var(--ff-mono); }
+
+.abri-reform {
+  margin-top: 2px;
+  background: var(--s900);
+  padding: 2.5rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+.abri-reform-item h4 { font-family: var(--ff-display); font-size: 1rem; font-weight: 600; color: var(--y400); margin-bottom: 0.4rem; }
+.abri-reform-item p { font-size: 0.85rem; color: var(--on-dark-dim); line-height: 1.65; }
+@media (max-width: 768px) { .abri-compare { grid-template-columns: 1fr; } .abri-divider { display: none; } }
+
+/* ── BAB 9: OTONOMI — Dark, stat grid + deskripsi ── */
+#otonomi { background: var(--s800); padding: 7rem 2rem; }
+#otonomi .section-heading { color: var(--y400); }
+#otonomi .section-heading em { color: var(--n100); font-style: italic; }
+
+.otonomi-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  margin-top: 3rem;
+  align-items: start;
+}
+.otonomi-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+.otonomi-stat {
+  background: oklch(97% 0 0 / 0.04);
+  padding: 2rem 1.5rem;
+  border-bottom: 2px solid oklch(68.1% 0.162 75.834 / 0.2);
+  transition: border-bottom-color 0.25s;
+}
+.otonomi-stat:hover { border-bottom-color: var(--y600); }
+.otonomi-stat-num { font-family: var(--ff-display); font-size: 2.8rem; font-weight: 700; color: var(--y600); line-height: 1; margin-bottom: 0.3rem; }
+.otonomi-stat-label { font-family: var(--ff-mono); font-size: 0.6rem; letter-spacing: 0.15em; color: var(--t400); text-transform: uppercase; margin-bottom: 0.4rem; }
+.otonomi-stat-desc { font-size: 0.82rem; color: var(--on-dark-dim); line-height: 1.6; }
+
+.otonomi-content { display: flex; flex-direction: column; gap: 2px; }
+.otonomi-item {
+  padding: 1.5rem 1.75rem;
+  background: oklch(97% 0 0 / 0.04);
+  border-left: 2px solid oklch(68.1% 0.162 75.834 / 0.2);
+  transition: border-left-color 0.25s, background 0.25s;
+}
+.otonomi-item:hover { border-left-color: var(--y600); background: oklch(97% 0 0 / 0.07); }
+.otonomi-item h3 { font-family: var(--ff-display); font-size: 1.1rem; font-weight: 600; color: var(--y400); margin-bottom: 0.4rem; }
+.otonomi-item p { font-size: 0.86rem; color: var(--on-dark-dim); line-height: 1.7; }
+@media (max-width: 768px) { .otonomi-layout { grid-template-columns: 1fr; gap: 3rem; } .otonomi-stats { grid-template-columns: 1fr 1fr; } }

@@ -1,0 +1,439 @@
+/* ============================================================
+   interactions.css — Micro-interactions & Animations
+   ============================================================ */
+
+/* ── 1. GLOBAL: smooth transitions for all interactive elements ── */
+*, *::before, *::after {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── 2. SCROLL REVEAL — staggered children ── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger siblings automatically */
+.three-col .fade-in:nth-child(2) { transition-delay: 0.1s; }
+.three-col .fade-in:nth-child(3) { transition-delay: 0.2s; }
+.hasil-grid .fade-in:nth-child(2) { transition-delay: 0.08s; }
+.hasil-grid .fade-in:nth-child(3) { transition-delay: 0.16s; }
+.hasil-grid .fade-in:nth-child(4) { transition-delay: 0.24s; }
+.hasil-grid .fade-in:nth-child(5) { transition-delay: 0.32s; }
+.hasil-grid .fade-in:nth-child(6) { transition-delay: 0.40s; }
+.nilai-grid .fade-in:nth-child(2) { transition-delay: 0.08s; }
+.nilai-grid .fade-in:nth-child(3) { transition-delay: 0.16s; }
+.nilai-grid .fade-in:nth-child(4) { transition-delay: 0.24s; }
+.nilai-grid .fade-in:nth-child(5) { transition-delay: 0.32s; }
+.nilai-grid .fade-in:nth-child(6) { transition-delay: 0.40s; }
+.pemilu-milestones .fade-in:nth-child(2) { transition-delay: 0.12s; }
+.pemilu-milestones .fade-in:nth-child(3) { transition-delay: 0.24s; }
+.amandemen-item:nth-child(2) { transition-delay: 0.07s; }
+.amandemen-item:nth-child(3) { transition-delay: 0.14s; }
+.amandemen-item:nth-child(4) { transition-delay: 0.21s; }
+.amandemen-item:nth-child(5) { transition-delay: 0.28s; }
+.amandemen-item:nth-child(6) { transition-delay: 0.35s; }
+
+/* ── 3. NAV LINKS — underline slide ── */
+.nav-links a {
+  position: relative;
+  padding-bottom: 2px;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--y600);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-links a:hover::after { width: 100%; }
+.nav-links a:hover { color: var(--y400); }
+
+/* ── 4. HERO CTA — arrow bounce + color shift ── */
+.hero-cta {
+  position: relative;
+  overflow: hidden;
+}
+.hero-cta::before {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--y600);
+  transition: width 0.35s ease;
+}
+.hero-cta:hover::before { width: 100%; }
+
+/* ── 5. HERO CHAPTER LIST — slide in on hover ── */
+.hero-chapters li {
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+.hero-chapters li:hover {
+  transform: translateX(-6px);
+  color: var(--y400);
+}
+.hero-chapters li::after {
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+.hero-chapters li:hover::after {
+  background: var(--y600);
+  transform: scale(1.5);
+}
+
+/* ── 6. YEAR BAND — scale on hover ── */
+.year-item {
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  cursor: default;
+}
+.year-item:not(.active):hover {
+  background: oklch(68.1% 0.162 75.834 / 0.1);
+  color: var(--y400);
+  transform: translateY(-2px);
+}
+
+/* ── 7. BG-CARD — lift + border reveal ── */
+.bg-card {
+  transition: background 0.3s ease, border-top-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.bg-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px oklch(0% 0 0 / 0.08);
+}
+
+/* Card number pulse on hover */
+.bg-card:hover .bg-card-num {
+  opacity: 0.35;
+  transition: opacity 0.3s ease;
+}
+
+/* ── 8. STAT NUMBERS — count-up ready + color pulse ── */
+.latar-stat-num {
+  transition: color 0.3s ease;
+}
+.latar-stat:hover .latar-stat-num {
+  color: var(--y400);
+  text-shadow: 0 0 24px oklch(68.1% 0.162 75.834 / 0.3);
+}
+.latar-stat {
+  transition: background 0.3s ease;
+}
+.latar-stat:hover {
+  background: oklch(68.1% 0.162 75.834 / 0.04);
+}
+
+/* ── 9. TIMELINE ITEMS — slide + dot glow ── */
+.tl-item {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.tl-dot {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+.tl-item:hover .tl-dot {
+  transform: translateX(-50%) scale(1.5);
+  box-shadow: 0 0 0 5px oklch(68.1% 0.162 75.834 / 0.2);
+}
+.tl-item.highlight:hover .tl-dot {
+  box-shadow: 0 0 0 7px oklch(68.1% 0.162 75.834 / 0.25);
+}
+.tl-event {
+  transition: color 0.25s ease;
+}
+.tl-item:hover .tl-event {
+  color: var(--y400);
+}
+.tl-item.highlight:hover .tl-event {
+  color: var(--y600);
+}
+
+/* ── 10. DAMPAK COLS — list item reveal ── */
+.dampak-col ul li {
+  transition: padding-left 0.25s ease, color 0.2s ease;
+}
+.dampak-col ul li:hover {
+  padding-left: 0.5rem;
+}
+.dampak-col.positif ul li:hover { color: oklch(55% 0.12 155); }
+.dampak-col.negatif ul li:hover { color: oklch(55% 0.12 22); }
+
+/* ── 11. PRINSIP ITEMS — border slide ── */
+.prinsip-item {
+  transition: border-left-color 0.3s ease, background 0.3s ease, padding-left 0.3s ease;
+}
+.prinsip-item:hover {
+  padding-left: 2.5rem;
+}
+
+/* ── 12. AMANDEMEN ITEMS — number highlight ── */
+.amandemen-item {
+  transition: background 0.25s ease;
+}
+.amandemen-item:hover {
+  background: oklch(68.1% 0.162 75.834 / 0.04);
+}
+.amandemen-num {
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+.amandemen-item:hover .amandemen-num {
+  opacity: 0.7;
+  color: var(--y600);
+}
+.amandemen-body h3 {
+  transition: color 0.25s ease;
+}
+.amandemen-item:hover .amandemen-body h3 {
+  color: var(--y600);
+}
+
+/* ── 13. MILESTONE CARDS — year color shift ── */
+.milestone-card {
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.milestone-card:hover {
+  transform: translateY(-6px);
+}
+.milestone-year {
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.milestone-card:hover .milestone-year {
+  color: var(--y400);
+  text-shadow: 0 0 40px oklch(68.1% 0.162 75.834 / 0.25);
+}
+.milestone-card h3 {
+  transition: color 0.25s ease;
+}
+.milestone-card:hover h3 { color: var(--y600); }
+
+/* ── 14. PERS CARDS — featured card shimmer ── */
+.pers-card {
+  transition: background 0.3s ease, border-top-color 0.3s ease, transform 0.3s ease;
+}
+.pers-card:not(.featured):hover {
+  transform: translateY(-4px);
+}
+.pers-card.featured {
+  position: relative;
+  overflow: hidden;
+}
+.pers-card.featured::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    oklch(68.1% 0.162 75.834 / 0.06) 50%,
+    transparent 60%
+  );
+  transform: skewX(-15deg);
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+.pers-card.featured:hover::after {
+  left: 120%;
+}
+.pers-stat {
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.pers-card:hover .pers-stat {
+  text-shadow: 0 0 30px oklch(68.1% 0.162 75.834 / 0.4);
+}
+
+/* ── 15. ABRI COMPARE — list item indent ── */
+.abri-before ul li,
+.abri-after ul li {
+  transition: padding-left 0.25s ease, color 0.2s ease;
+}
+.abri-before ul li:hover { padding-left: 0.5rem; color: oklch(50% 0.12 22); }
+.abri-after  ul li:hover { padding-left: 0.5rem; color: oklch(50% 0.12 155); }
+
+.abri-reform-item {
+  transition: background 0.25s ease, padding-left 0.25s ease;
+  padding: 0.5rem 0;
+  border-radius: 2px;
+}
+.abri-reform-item:hover {
+  background: oklch(68.1% 0.162 75.834 / 0.06);
+  padding-left: 0.5rem;
+}
+.abri-reform-item h4 {
+  transition: color 0.25s ease;
+}
+.abri-reform-item:hover h4 { color: var(--y600); }
+
+/* ── 16. OTONOMI STATS — glow on hover ── */
+.otonomi-stat {
+  transition: border-bottom-color 0.3s ease, background 0.3s ease;
+}
+.otonomi-stat-num {
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.otonomi-stat:hover .otonomi-stat-num {
+  text-shadow: 0 0 24px oklch(68.1% 0.162 75.834 / 0.4);
+}
+.otonomi-item {
+  transition: border-left-color 0.3s ease, background 0.3s ease, padding-left 0.3s ease;
+}
+.otonomi-item:hover {
+  padding-left: 2.25rem;
+}
+.otonomi-item h3 {
+  transition: color 0.25s ease;
+}
+.otonomi-item:hover h3 { color: var(--y600); }
+
+/* ── 17. NILAI CARDS — lift + icon bounce ── */
+.nilai-card {
+  transition: background 0.25s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), border-bottom-color 0.25s ease;
+}
+.nilai-icon {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.3s ease;
+}
+.nilai-card:hover .nilai-icon {
+  transform: scale(1.2) rotate(-5deg);
+  color: var(--y400);
+}
+.nilai-card h4 {
+  transition: color 0.25s ease;
+}
+.nilai-card:hover h4 { color: var(--y600); }
+
+/* ── 18. QUOTE BLOCK — border pulse ── */
+.quote-block {
+  transition: border-left-color 0.4s ease, box-shadow 0.4s ease;
+}
+.quote-block:hover {
+  border-left-color: var(--y400);
+  box-shadow: -4px 0 20px oklch(68.1% 0.162 75.834 / 0.15);
+}
+.quote-block blockquote {
+  transition: color 0.3s ease;
+}
+.quote-block:hover blockquote { color: var(--y600); }
+
+/* ── 19. HASIL ITEMS — lift + checkmark color ── */
+.hasil-item {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease, border-top-color 0.3s ease;
+}
+.hasil-item ul li {
+  transition: padding-left 0.2s ease, color 0.2s ease;
+}
+.hasil-item:hover ul li { padding-left: 0.25rem; }
+.hasil-item h3 {
+  transition: color 0.25s ease;
+}
+.hasil-item:hover h3 { color: var(--y600); }
+
+/* ── 20. FOOTER LOGO — glow ── */
+footer .logo {
+  transition: text-shadow 0.4s ease, color 0.3s ease;
+  cursor: default;
+}
+footer .logo:hover {
+  text-shadow: 0 0 30px oklch(68.1% 0.162 75.834 / 0.4);
+  color: var(--y600);
+}
+
+/* ── 21. SECTION LABEL — line expand ── */
+.section-label::after {
+  transition: width 0.4s ease, opacity 0.4s ease;
+}
+.section-label:hover::after {
+  width: 80px;
+  opacity: 0.7;
+}
+
+/* ── 22. CRISIS STAT — scale ── */
+.crisis-stat {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+.crisis-stat:hover {
+  transform: scale(1.04);
+  box-shadow: 0 8px 24px oklch(0% 0 0 / 0.25);
+}
+.crisis-stat .big {
+  transition: color 0.3s ease;
+}
+.crisis-stat:hover .big { color: var(--y600); }
+
+/* ── 23. MARTIR NAMES — reveal underline ── */
+.martir-names span {
+  transition: border-color 0.25s ease, color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+}
+.martir-names span:hover {
+  background: oklch(40% 0.12 22 / 0.15);
+  transform: translateX(4px);
+}
+
+/* ── 24. PEMILU BOTTOM CARDS — list indent ── */
+.pemilu-bottom-card ul li {
+  transition: padding-left 0.2s ease, color 0.2s ease;
+}
+.pemilu-bottom-card:hover ul li { padding-left: 0.25rem; }
+.pemilu-bottom-card h3 {
+  transition: color 0.25s ease;
+}
+.pemilu-bottom-card:hover h3 { color: var(--y600); }
+
+/* ── 25. SCROLL PROGRESS BAR ── */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(to right, var(--y600), var(--y400));
+  z-index: 999;
+  transition: width 0.1s linear;
+  pointer-events: none;
+}
+
+/* ── 26. ACTIVE NAV LINK — yellow dot indicator ── */
+.nav-links a.active {
+  color: var(--y400);
+}
+.nav-links a.active::after {
+  width: 100%;
+  background: var(--y600);
+}
+
+/* ── 27. SELECTION COLOR ── */
+::selection {
+  background: oklch(68.1% 0.162 75.834 / 0.3);
+  color: var(--s900);
+}
+
+/* ── 28. FOCUS VISIBLE — keyboard nav ── */
+:focus-visible {
+  outline: 2px solid var(--y600);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ── 29. SMOOTH IMAGE LOAD ── */
+img {
+  transition: opacity 0.4s ease, filter 0.4s ease;
+}
+
+/* ── 30. REDUCED MOTION — respect user preference ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .fade-in { opacity: 1; transform: none; }
+  .tl-item { opacity: 1; transform: none; }
+}

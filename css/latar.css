@@ -1,140 +1,105 @@
-/* ─── BAB 1: LATAR BELAKANG ─── */
-#latar {
-  background: var(--cream);
+﻿/* ================================================================
+   BAB 1: LATAR BELAKANG
+   Layout: Stat bar + 3-col cards + Tragedi full-bleed callout
+   ================================================================ */
+#latar { background: var(--n100); padding: 7rem 0 5rem; }
+#latar > .container { padding: 0 2rem 0; }
+
+#latar .section-heading { color: var(--y600); }
+#latar .section-heading em { color: var(--ink); font-style: italic; }
+
+/* Stat bar - 3 big numbers across full width */
+.latar-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin: 3rem 0 0;
+  border-top: 1px solid var(--t200);
+  border-bottom: 1px solid var(--t200);
+}
+.latar-stat {
+  padding: 2.5rem 2rem;
+  border-right: 1px solid var(--t200);
+  position: relative;
+}
+.latar-stat:last-child { border-right: none; }
+.latar-stat-num {
+  font-family: var(--ff-display);
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 700;
+  color: var(--y600);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+.latar-stat-label {
+  font-family: var(--ff-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--t600);
+}
+.latar-stat-desc {
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  margin-top: 0.5rem;
+  line-height: 1.6;
 }
 
-/* Three-column card grid */
+/* 3-col cards */
 .three-col {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2px;
   margin-top: 3rem;
 }
-
 .bg-card {
-  background: var(--primary-xlight);
+  background: var(--t50);
   padding: 2.5rem 2rem;
-  position: relative;
-  overflow: hidden;
-  transition: background 0.3s;
+  border-top: 2px solid var(--t200);
+  transition: background 0.3s, border-top-color 0.3s;
 }
-
-.bg-card:hover {
-  background: var(--primary-light);
-}
-
+.bg-card:hover { background: var(--t100); border-top-color: var(--y600); }
 .bg-card-num {
   font-family: var(--ff-display);
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 700;
-  color: var(--primary-light);
   line-height: 1;
-  margin-bottom: 1rem;
-  user-select: none;
-}
-
-.bg-card h3 {
-  font-family: var(--ff-display);
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--primary-dark);
-  margin-bottom: 1rem;
-  line-height: 1.2;
-}
-
-.bg-card p {
-  font-size: 0.95rem;
-  color: var(--ink-muted);
-  line-height: 1.75;
-}
-
-.bg-card ul {
-  list-style: none;
-  margin-top: 1rem;
-}
-
-.bg-card ul li {
-  font-size: 0.9rem;
-  color: var(--ink-muted);
-  padding: 0.4rem 0;
-  border-bottom: 1px solid var(--primary-light);
-  display: flex;
-  align-items: flex-start;
-  gap: 0.6rem;
-  line-height: 1.5;
-}
-
-.bg-card ul li::before {
-  content: '—';
-  color: var(--gold);
-  flex-shrink: 0;
-  margin-top: 0.05em;
-}
-
-/* Crisis stat badge */
-.crisis-stat {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0.3rem;
-  margin: 0.75rem 0;
-  padding: 0.75rem 1.25rem;
-  background: var(--primary-dark);
-  color: var(--cream);
-  border-radius: 2px;
-}
-
-.crisis-stat .big {
-  font-family: var(--ff-display);
-  font-size: 2.2rem;
-  font-weight: 600;
-  color: var(--gold-light);
-}
-
-.crisis-stat .label {
-  font-size: 0.8rem;
-  font-family: var(--ff-mono);
-  letter-spacing: 0.05em;
-  opacity: 0.75;
-}
-
-/* Tragedi Trisakti block */
-.tragedi-block {
-  margin: 4rem 0 0;
-  border-left: 4px solid var(--red-accent);
-  padding: 2rem 2.5rem;
-  background: rgba(139, 32, 32, 0.05);
-}
-
-.tragedi-block h3 {
-  font-family: var(--ff-display);
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: var(--red-accent);
   margin-bottom: 0.5rem;
+  user-select: none;
+  color: var(--y600);
+  opacity: 0.18;
 }
+.bg-card h3 { font-family: var(--ff-display); font-size: 1.3rem; font-weight: 600; color: var(--ink); margin-bottom: 0.8rem; line-height: 1.2; }
+.bg-card p { font-size: 0.9rem; color: var(--ink-muted); line-height: 1.75; }
+.bg-card ul { list-style: none; margin-top: 1rem; }
+.bg-card ul li { font-size: 0.86rem; color: var(--ink-muted); padding: 0.38rem 0; border-bottom: 1px solid var(--t100); display: flex; align-items: flex-start; gap: 0.6rem; line-height: 1.5; }
+.bg-card ul li::before { content: '\2014'; color: var(--y600); flex-shrink: 0; }
 
-.tragedi-block .date {
-  font-family: var(--ff-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.15em;
-  color: var(--red-accent);
-  opacity: 0.7;
-  margin-bottom: 1rem;
+.crisis-stat { display: inline-flex; align-items: baseline; gap: 0.4rem; margin: 0.85rem 0; padding: 0.75rem 1.25rem; background: var(--s900); border-radius: 2px; }
+.crisis-stat .big { font-family: var(--ff-display); font-size: 2rem; font-weight: 600; color: var(--y400); }
+.crisis-stat .label { font-size: 0.76rem; font-family: var(--ff-mono); letter-spacing: 0.05em; color: oklch(87% 0 0 / 0.65); }
+
+/* Tragedi - full bleed dark block */
+.tragedi-block {
+  margin-top: 5rem;
+  background: var(--s900);
+  padding: 4rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
 }
-
-.martir-names {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1rem;
-}
-
-.martir-names span {
-  font-family: var(--ff-display);
-  font-size: 0.95rem;
-  font-weight: 600;
-  padding: 0.3rem 0.9rem;
-  border: 1px solid rgba(139, 32, 32, 0.4);
-  color: var(--red-accent);
-  border-radius: 1px;
+.tragedi-block-left h3 { font-family: var(--ff-display); font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; color: var(--y400); line-height: 1.1; margin-bottom: 0.5rem; }
+.tragedi-block-left .date { font-family: var(--ff-mono); font-size: 0.65rem; letter-spacing: 0.15em; color: var(--t400); margin-bottom: 1.25rem; }
+.tragedi-block-left p { font-size: 0.95rem; color: var(--on-dark-dim); line-height: 1.8; }
+.tragedi-block-right { border-left: 1px solid oklch(68.1% 0.162 75.834 / 0.2); padding-left: 3rem; }
+.tragedi-block-right p { font-family: var(--ff-display); font-size: 1.05rem; font-style: italic; color: oklch(87% 0 0 / 0.55); margin-bottom: 1.5rem; line-height: 1.7; }
+.martir-names { display: flex; flex-direction: column; gap: 0.5rem; }
+.martir-names span { font-family: var(--ff-display); font-size: 1.1rem; font-weight: 600; color: var(--y400); display: flex; align-items: center; gap: 0.75rem; }
+.martir-names span::before { content: ''; display: block; width: 20px; height: 1px; background: var(--y600); }
+@media (max-width: 768px) {
+  .tragedi-block { grid-template-columns: 1fr; gap: 2rem; }
+  .tragedi-block-right { border-left: none; border-top: 1px solid oklch(68.1% 0.162 75.834 / 0.2); padding-left: 0; padding-top: 2rem; }
+  .latar-stats { grid-template-columns: 1fr; }
+  .latar-stat { border-right: none; border-bottom: 1px solid var(--t200); }
 }

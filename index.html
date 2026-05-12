@@ -3,32 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reformasi Indonesia 1998 — Sejarah Perubahan Bangsa</title>
+<title>Demokrasi Reformasi Indonesia 1998 — Sejarah Perubahan Bangsa</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/nav.css">
 <link rel="stylesheet" href="css/hero.css">
 <link rel="stylesheet" href="css/latar.css">
-<link rel="stylesheet" href="css/timeline.css">
-<link rel="stylesheet" href="css/tokoh.css">
-<link rel="stylesheet" href="css/hasil.css">
-<link rel="stylesheet" href="css/dampak.css">
-<link rel="stylesheet" href="css/presiden.css">
-<link rel="stylesheet" href="css/kesimpulan.css">
+<link rel="stylesheet" href="css/timeline.css"><link rel="stylesheet" href="css/hasil.css">
+<link rel="stylesheet" href="css/layouts.css">
+<link rel="stylesheet" href="css/interactions.css">
+<link rel="stylesheet" href="css/dampak.css"><link rel="stylesheet" href="css/kesimpulan.css">
 <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" href="#">Reformasi 1998</a>
+  <a class="nav-logo" href="#"><span class="logo-main">Reformasi</span><span class="logo-sub">Indonesia 1998</span></a>
   <ul class="nav-links">
     <li><a href="#latar">Latar Belakang</a></li>
-    <li><a href="#timeline">Timeline</a></li>
-    <li><a href="#tokoh">Tokoh</a></li>
-    <li><a href="#hasil">Perubahan</a></li>
-    <li><a href="#presiden">Era Presiden</a></li>
+    <li><a href="#timeline">Kronologi</a></li>
+    <li><a href="#demokrasi">Demokrasi</a></li>
+    <li><a href="#amandemen">Amandemen</a></li>
+    <li><a href="#pemilu">Pemilu</a></li>
     <li><a href="#kesimpulan">Refleksi</a></li>
   </ul>
 </nav>
@@ -36,66 +34,118 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
-  <div class="hero-accent-line"></div>
 
-  <!-- LEFT: main content -->
-  <div class="hero-content">
-    <div class="hero-num">1998</div>
-    <span class="hero-eyebrow">Era Reformasi Indonesia</span>
-    <h1 class="hero-title">
-      Dari Keberanian<br><em>Menuju Demokrasi</em>
-    </h1>
-    <p class="hero-subtitle">
-      Selama 32 tahun Orde Baru berkuasa dengan tangan besi. Pada 1998,
-      mahasiswa, rakyat, dan sejarah bersatu &mdash; memaksa perubahan
-      yang mengubah wajah Indonesia selamanya.
-    </p>
-    <div class="hero-year-band">
-      <div class="year-item">1997</div>
-      <div class="year-item active">1998</div>
-      <div class="year-item">1999</div>
-      <div class="year-item">2004</div>
-      <div class="year-item">2024</div>
-    </div>
-    <a class="hero-cta" href="#latar">
-      <svg viewBox="0 0 24 24"><polyline points="7 13 12 18 17 13"/><polyline points="7 6 12 11 17 6"/></svg>
-      Pelajari Sejarahnya
-    </a>
+  <!-- Decorative: vertical rule left -->
+  <div class="hero-rule-left"></div>
+
+  <!-- Top bar: date stamp -->
+  <div class="hero-topbar">
+    <span class="hero-topbar-date">21 Mei 1998</span>
+    <span class="hero-topbar-sep"></span>
+    <span class="hero-topbar-label">Hari Bersejarah Indonesia</span>
   </div>
 
-  <!-- RIGHT: chapter navigation -->
-  <div class="hero-chapters">
-    <ul>
-      <li><a href="#latar">Latar Belakang</a></li>
-      <li><a href="#timeline">Kronologi Peristiwa</a></li>
-      <li><a href="#tokoh">Tokoh-tokoh Kunci</a></li>
-      <li><a href="#hasil">Hasil Perubahan</a></li>
-      <li><a href="#presiden">Era Presiden</a></li>
-      <li><a href="#kesimpulan">Refleksi</a></li>
-    </ul>
+  <!-- Main content — bottom left -->
+  <div class="hero-content">
+
+    <!-- Eyebrow -->
+    <div class="hero-eyebrow">
+      <span class="hero-eyebrow-line"></span>
+      <span>Demokrasi Reformasi Indonesia</span>
+    </div>
+
+    <!-- Title -->
+    <h1 class="hero-title">
+      Dari Keberanian<br>
+      <em>Menuju Demokrasi</em>
+    </h1>
+
+    <!-- Subtitle -->
+    <p class="hero-subtitle">
+      Selama 32 tahun Orde Baru berkuasa dengan tangan besi.
+      Pada 1998, mahasiswa, rakyat, dan sejarah bersatu &mdash;
+      memaksa perubahan yang mengubah wajah Indonesia selamanya.
+    </p>
+
+    <!-- Bottom row: year band + CTA -->
+    <div class="hero-bottom-row">
+      <div class="hero-year-band">
+        <div class="year-item">1997</div>
+        <div class="year-item active">1998</div>
+        <div class="year-item">1999</div>
+        <div class="year-item">2004</div>
+        <div class="year-item">2026</div>
+      </div>
+      <a class="hero-cta" href="#latar">
+        <svg viewBox="0 0 24 24"><polyline points="7 13 12 18 17 13"/><polyline points="7 6 12 11 17 6"/></svg>
+        Pelajari Sejarahnya
+      </a>
+    </div>
+  </div>
+
+  <!-- Right panel: chapter index -->
+  <div class="hero-index">
+    <div class="hero-index-label">Isi</div>
+    <ol class="hero-index-list">
+      <li><a href="#latar"><span class="idx-num">01</span><span class="idx-title">Latar Belakang</span></a></li>
+      <li><a href="#timeline"><span class="idx-num">02</span><span class="idx-title">Kronologi</span></a></li>
+      <li><a href="#dampak"><span class="idx-num">03</span><span class="idx-title">Dampak</span></a></li>
+      <li><a href="#demokrasi"><span class="idx-num">04</span><span class="idx-title">Demokrasi</span></a></li>
+      <li><a href="#amandemen"><span class="idx-num">05</span><span class="idx-title">Amandemen</span></a></li>
+      <li><a href="#pemilu"><span class="idx-num">06</span><span class="idx-title">Pemilu</span></a></li>
+      <li><a href="#pers"><span class="idx-num">07</span><span class="idx-title">Kebebasan Pers</span></a></li>
+      <li><a href="#abri"><span class="idx-num">08</span><span class="idx-title">Reformasi ABRI</span></a></li>
+      <li><a href="#otonomi"><span class="idx-num">09</span><span class="idx-title">Otonomi Daerah</span></a></li>
+      <li><a href="#kesimpulan"><span class="idx-num">10</span><span class="idx-title">Refleksi</span></a></li>
+    </ol>
   </div>
 
   <!-- Scroll indicator -->
   <div class="hero-scroll">
-    GULIR<span></span>
+    <span></span>
+    <span class="hero-scroll-text">Gulir</span>
   </div>
 </section>
 
 <!-- BAB 1: LATAR BELAKANG -->
 <section id="latar">
-  <div class="container">
-    <div class="section-label">Bab 1</div>
+  <div class="container" style="padding:0 2rem">
+    <div class="section-label fade-in">Bab 1</div>
     <h2 class="section-heading fade-in">Latar Belakang <em>&amp; Penyebab</em></h2>
-    <p class="lead-text fade-in">Selama 32 tahun Orde Baru membangun fondasi sentralisme yang kuat &mdash; namun rapuh. Tiga faktor besar meruntuhkan semuanya sekaligus.</p>
+    <p class="lead-text fade-in">Reformasi dipicu oleh akumulasi krisis multidimensi &mdash; ekonomi, politik, dan sosial yang meledak bersamaan pada 1997&ndash;1998.</p>
+  </div>
 
+  <!-- Stat bar -->
+  <div class="container" style="padding:0 2rem">
+    <div class="latar-stats fade-in">
+      <div class="latar-stat">
+        <div class="latar-stat-num" data-count="32" data-suffix="">32</div>
+        <div class="latar-stat-label">Tahun Berkuasa</div>
+        <div class="latar-stat-desc">Soeharto memimpin Indonesia sejak 1966 dengan sistem sentralistik dan otoriter</div>
+      </div>
+      <div class="latar-stat">
+        <div class="latar-stat-num">Rp 17rb</div>
+        <div class="latar-stat-label">Per USD (puncak krisis)</div>
+        <div class="latar-stat-desc">Dari Rp 2.400 sebelum krisis &mdash; rupiah ambruk lebih dari 600% dalam hitungan bulan</div>
+      </div>
+      <div class="latar-stat">
+        <div class="latar-stat-num">48+</div>
+        <div class="latar-stat-label">Kampus Berdemonstrasi</div>
+        <div class="latar-stat-desc">UI, ITB, UGM, Unair, Unhas dan puluhan kampus lain turun ke jalan serentak</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 cards -->
+  <div class="container" style="padding:0 2rem; margin-top:3rem">
     <div class="three-col">
       <div class="bg-card fade-in">
         <div class="bg-card-num">01</div>
         <h3>Orde Baru yang Otoriter</h3>
-        <p>Pemerintahan Soeharto (1966&ndash;1998) dikenal sentralistik dan penuh KKN. Selama 32 tahun berkuasa, sistem ini menutup ruang kebebasan rakyat.</p>
+        <p>Pemerintahan Soeharto dinilai otoriter, korup, kolutif, dan nepotistis. Sistem ini menutup rapat ruang kebebasan rakyat selama tiga dekade.</p>
         <ul>
           <li>Pembredelan pers: media kritis ditutup paksa</li>
-          <li>Dwifungsi ABRI: militer di ranah sipil &amp; politik</li>
+          <li>Dwifungsi ABRI: militer berkuasa di ranah sipil &amp; politik</li>
           <li>Golkar selalu memenangkan setiap pemilu</li>
           <li>Indoktrinasi P4 di sekolah &amp; instansi pemerintah</li>
         </ul>
@@ -103,7 +153,7 @@
       <div class="bg-card fade-in">
         <div class="bg-card-num">02</div>
         <h3>Krisis Moneter 1997&ndash;1998</h3>
-        <p>Badai krisis dari Thailand menghantam Indonesia. Nilai tukar rupiah tak terkendali, memicu kehancuran ekonomi yang masif.</p>
+        <p>Krisis moneter Asia melanda Indonesia pertengahan 1997. Nilai rupiah ambruk, memicu inflasi, PHK massal, dan kelangkaan bahan pokok.</p>
         <div class="crisis-stat">
           <span class="big">Rp 2.400</span>
           <span class="label">&rarr; Rp 17.000<br>per USD</span>
@@ -112,13 +162,12 @@
           <li>16 bank swasta ditutup pemerintah</li>
           <li>PHK massal di seluruh sektor industri</li>
           <li>Harga sembako naik hingga 300%</li>
-          <li>Utang luar negeri swasta membengkak</li>
         </ul>
       </div>
       <div class="bg-card fade-in">
         <div class="bg-card-num">03</div>
         <h3>Pemicu Sosial &amp; Politik</h3>
-        <p>Mahasiswa dari UI, ITB, UGM, Unair, Unhas dan puluhan kampus lain turun ke jalan. Satu tuntutan: Reformasi Total.</p>
+        <p>Demonstrasi mahasiswa meluas ke berbagai kota. Satu tuntutan: Reformasi Total &mdash; turunkan Soeharto, hapus KKN, amandemen UUD.</p>
         <ul>
           <li>Turunkan Soeharto dari jabatan presiden</li>
           <li>Hapus segala praktik KKN</li>
@@ -127,11 +176,135 @@
         </ul>
       </div>
     </div>
+  </div>
 
-    <div class="tragedi-block fade-in">
-      <h3>Tragedi Trisakti &mdash; 12 Mei 1998</h3>
-      <div class="date">KAMPUS UNIVERSITAS TRISAKTI, JAKARTA &mdash; 12 MEI 1998</div>
-      <p>Aparat menembak mahasiswa yang sedang berdemonstrasi secara damai. Empat nyawa melayang &mdash; menjadi pemantik kerusuhan besar yang mengguncang seluruh Indonesia selama tiga hari berikutnya.</p>
+</section>
+
+<!-- BAB 2: KRONOLOGI -->
+<section id="timeline" class="on-dark">
+  <div class="container">
+    <div class="section-label">Bab 2</div>
+    <h2 class="section-heading">Kronologi <em>Peristiwa</em></h2>
+    <p class="lead-text">Rentetan kejadian yang mengubah wajah Indonesia dalam hitungan bulan &mdash; dari krisis ekonomi hingga lengsernya sang presiden dan lahirnya era baru.</p>
+    <div class="timeline-list">
+      <div class="tl-item">
+        <div class="tl-date">Awal<br>1998</div>
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <div class="tl-event">Rupiah terus merosot, harga pokok melonjak</div>
+          <div class="tl-desc">Krisis moneter semakin dalam. Harga kebutuhan pokok melonjak drastis, antrean panjang terjadi di mana-mana, kepanikan sosial menyebar ke seluruh kota.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Maret<br>1998</div>
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <div class="tl-event">Soeharto terpilih kembali untuk ke-7 kalinya</div>
+          <div class="tl-desc">MPR kembali memilih Soeharto sebagai presiden untuk masa jabatan ke-7, memicu kekecewaan dan kemarahan publik yang semakin luas.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Mei<br>1998</div>
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <div class="tl-event">Mahasiswa duduki Gedung DPR/MPR</div>
+          <div class="tl-desc">Ribuan mahasiswa dari berbagai penjuru Indonesia mulai menduduki Gedung DPR/MPR di Senayan, Jakarta, menuntut reformasi total.</div>
+        </div>
+      </div>
+      <div class="tl-item highlight">
+        <div class="tl-date">12 Mei<br>1998</div>
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <div class="tl-event">Tragedi Trisakti</div>
+          <div class="tl-desc">Empat mahasiswa Trisakti gugur ditembak aparat &mdash; Elang, Heri, Hafidin, dan Hendriawan. Peristiwa ini mengguncang seluruh bangsa dan menjadi titik balik sejarah.</div>
+        </div>
+      </div>
+
+      <!-- TRAGEDI TRISAKTI — highlight item -->
+      <div class="tl-item highlight">
+        <div class="tl-date">12 Mei<br>1998</div>
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <div class="tl-event">Tragedi Trisakti</div>
+          <div class="tl-desc">Empat mahasiswa gugur ditembak aparat saat berdemonstrasi damai &mdash; Elang, Heri, Hafidin, dan Hendriawan. Peristiwa ini mengguncang seluruh bangsa dan menjadi titik balik sejarah.</div>
+        </div>
+      </div>
+      <div class="tl-item highlight">
+        <div class="tl-date">13&ndash;15 Mei<br>1998</div>
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <div class="tl-event">Kerusuhan Besar Mei 1998</div>
+          <div class="tl-desc">Kerusuhan besar meletus di Jakarta, Solo, Medan, dan Palembang, disertai penjarahan dan pembakaran. Ribuan korban jiwa, meninggalkan luka mendalam khususnya bagi warga etnis Tionghoa.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">19 Mei<br>1998</div>
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <div class="tl-event">14 menteri mengundurkan diri</div>
+          <div class="tl-desc">14 menteri Kabinet Pembangunan VII mengundurkan diri. Fondasi pemerintahan Orde Baru runtuh dari dalam.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">20 Mei<br>1998</div>
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <div class="tl-event">Amien Rais pimpin demonstrasi besar</div>
+          <div class="tl-desc">Ratusan ribu orang berkumpul di Gedung DPR/MPR bersama Amien Rais, menuntut Soeharto segera turun dari jabatan presiden.</div>
+        </div>
+      </div>
+      <div class="tl-item highlight">
+        <div class="tl-date">21 Mei<br>1998</div>
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <div class="tl-event">Soeharto mengundurkan diri &mdash; 09:00 WIB</div>
+          <div class="tl-desc">Di Istana Merdeka, Soeharto mengumumkan pengunduran dirinya setelah 32 tahun berkuasa. B.J. Habibie langsung dilantik sebagai Presiden ke-3 RI. Era Orde Baru berakhir, Era Reformasi dimulai.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">7 Juni<br>1999</div>
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <div class="tl-event">Pemilu pertama era Reformasi</div>
+          <div class="tl-desc">Diikuti 48 partai politik &mdash; pemilu paling beragam dan bebas dalam sejarah Indonesia modern, jauh berbeda dari pemilu Orde Baru yang hanya tiga partai.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1999</div>
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <div class="tl-event">Referendum Timor Timur</div>
+          <div class="tl-desc">Rakyat Timor Timur memilih kemerdekaan melalui referendum. Provinsi itu resmi lepas dari NKRI.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">1999&ndash;2002</div>
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <div class="tl-event">Amandemen UUD 1945 (4 tahap)</div>
+          <div class="tl-desc">UUD 1945 diamandemen sebanyak empat kali, mengubah secara radikal struktur ketatanegaraan Indonesia menjadi lebih demokratis dan berimbang.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">2004</div>
+        <div class="tl-dot"></div>
+        <div class="tl-body">
+          <div class="tl-event">Pemilihan presiden langsung pertama</div>
+          <div class="tl-desc">SBY vs Megawati &mdash; rakyat Indonesia untuk pertama kalinya memilih presiden secara langsung. Tonggak demokrasi reformasi yang sesungguhnya.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tragedi full-bleed callout — inside Bab 2 -->
+  <div class="tragedi-block fade-in">
+    <div class="tragedi-block-left">
+      <h3>Tragedi Trisakti</h3>
+      <div class="date">12 MEI 1998 &mdash; KAMPUS UNIVERSITAS TRISAKTI, JAKARTA</div>
+      <p>Aparat menembak mahasiswa yang sedang berdemonstrasi secara damai. Empat nyawa melayang &mdash; menjadi titik ledak yang tak terbendung dan pemantik kerusuhan besar yang mengguncang seluruh Indonesia.</p>
+    </div>
+    <div class="tragedi-block-right">
+      <p>"Mereka bukan sekadar mahasiswa. Mereka adalah wajah dari jutaan rakyat yang sudah tidak tahan lagi."</p>
       <div class="martir-names">
         <span>Elang Mulia Lesmana</span>
         <span>Heri Hertanto</span>
@@ -142,448 +315,481 @@
   </div>
 </section>
 
-<!-- BAB 2: TIMELINE -->
-<section id="timeline">
-  <div class="container">
-    <div class="section-label">Bab 2</div>
-    <h2 class="section-heading">Kronologi <em>Peristiwa</em></h2>
-    <p class="lead-text">Rentetan kejadian yang mengubah wajah Indonesia dalam hitungan bulan &mdash; dari krisis ekonomi hingga lengsernya sang presiden.</p>
-
-    <div class="timeline-list">
-      <div class="tl-item">
-        <div class="tl-date">Januari<br>1998</div>
-        <div class="tl-dot"></div>
-        <div class="tl-body">
-          <div class="tl-event">Rupiah anjlok tak terkendali</div>
-          <div class="tl-desc">Harga bahan pokok meroket. Antrean panjang terjadi di mana-mana. Kepanikan sosial mulai menyebar ke seluruh kota.</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date">Maret<br>1998</div>
-        <div class="tl-dot"></div>
-        <div class="tl-body">
-          <div class="tl-event">Soeharto terpilih kembali (ke-7)</div>
-          <div class="tl-desc">MPR kembali memilih Soeharto sebagai presiden &mdash; memantik kemarahan publik yang semakin dalam.</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date">4 Mei<br>1998</div>
-        <div class="tl-dot"></div>
-        <div class="tl-body">
-          <div class="tl-event">Mahasiswa duduki DPR/MPR</div>
-          <div class="tl-desc">Ribuan mahasiswa dari berbagai penjuru mulai menduduki Gedung DPR/MPR di Senayan, Jakarta.</div>
-        </div>
-      </div>
-      <div class="tl-item highlight">
-        <div class="tl-date">12 Mei<br>1998</div>
-        <div class="tl-dot"></div>
-        <div class="tl-body">
-          <div class="tl-event">Tragedi Trisakti</div>
-          <div class="tl-desc">Empat mahasiswa Trisakti gugur ditembak aparat &mdash; Elang, Heri, Hafidin, dan Hendriawan. Peristiwa ini mengguncang seluruh bangsa.</div>
-        </div>
-      </div>
-      <div class="tl-item highlight">
-        <div class="tl-date">13&ndash;15 Mei<br>1998</div>
-        <div class="tl-dot"></div>
-        <div class="tl-body">
-          <div class="tl-event">Kerusuhan Mei 1998</div>
-          <div class="tl-desc">Kerusuhan besar di Jakarta, Solo, Medan, Palembang. Penjarahan, pembakaran, dan ribuan korban jiwa &mdash; meninggalkan luka mendalam bagi bangsa, khususnya warga etnis Tionghoa.</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date">19 Mei<br>1998</div>
-        <div class="tl-dot"></div>
-        <div class="tl-body">
-          <div class="tl-event">14 menteri kabinet mengundurkan diri</div>
-          <div class="tl-desc">Fondasi pemerintahan Orde Baru runtuh dari dalam. Kabinet berantakan.</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date">20 Mei<br>1998</div>
-        <div class="tl-dot"></div>
-        <div class="tl-body">
-          <div class="tl-event">Amien Rais pimpin demonstrasi besar</div>
-          <div class="tl-desc">Ratusan ribu orang berkumpul di Gedung DPR/MPR bersama Amien Rais, menuntut Soeharto turun.</div>
-        </div>
-      </div>
-      <div class="tl-item highlight">
-        <div class="tl-date">21 Mei<br>1998</div>
-        <div class="tl-dot"></div>
-        <div class="tl-body">
-          <div class="tl-event">Soeharto mengundurkan diri &mdash; 09:00 WIB</div>
-          <div class="tl-desc">Di Istana Merdeka, Soeharto menyampaikan pernyataan pengunduran dirinya setelah 32 tahun berkuasa. B.J. Habibie langsung dilantik sebagai Presiden ke-3 RI.</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date">7 Juni<br>1999</div>
-        <div class="tl-dot"></div>
-        <div class="tl-body">
-          <div class="tl-event">Pemilu pertama era Reformasi</div>
-          <div class="tl-desc">Diikuti 48 partai politik &mdash; pemilu paling beragam dan bebas dalam sejarah Indonesia modern.</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date">1999</div>
-        <div class="tl-dot"></div>
-        <div class="tl-body">
-          <div class="tl-event">Referendum Timor Timur</div>
-          <div class="tl-desc">Rakyat Timor Timur memilih kemerdekaan. Provinsi itu resmi lepas dari NKRI.</div>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-date">2004</div>
-        <div class="tl-dot"></div>
-        <div class="tl-body">
-          <div class="tl-event">Pemilihan presiden langsung pertama</div>
-          <div class="tl-desc">SBY vs Megawati &mdash; rakyat Indonesia untuk pertama kalinya memilih presiden secara langsung dengan satu suara satu orang.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BAB 3: TOKOH -->
-<section id="tokoh">
-  <div class="container-wide">
-    <div class="section-label">Bab 3</div>
-    <h2 class="section-heading fade-in">Tokoh-tokoh <em>Kunci</em></h2>
-    <p class="lead-text fade-in">Para pelaku dan saksi sejarah yang membentuk jalannya Reformasi Indonesia.</p>
-    <div class="tokoh-grid">
-      <div class="tokoh-card fade-in">
-        <div class="tokoh-initial">SH</div>
-        <h3>Soeharto</h3>
-        <div class="role">Presiden Orde Baru (1966&ndash;1998)</div>
-        <p>Berkuasa selama 32 tahun dengan gaya otoriter. Pada 21 Mei 1998, tekanan reformasi memaksanya mengundurkan diri &mdash; mengakhiri era Orde Baru.</p>
-      </div>
-      <div class="tokoh-card fade-in">
-        <div class="tokoh-initial">BH</div>
-        <h3>B.J. Habibie</h3>
-        <div class="role">Presiden Transisi (1998&ndash;1999)</div>
-        <p>Memberikan kebebasan pers, mengizinkan berdirinya partai baru, dan membuka jalan referendum Timor Timur &mdash; meski harus menanggung kritik besar atas lepasnya wilayah tersebut.</p>
-      </div>
-      <div class="tokoh-card fade-in">
-        <div class="tokoh-initial">AR</div>
-        <h3>Amien Rais</h3>
-        <div class="role">Motor Utama Demonstrasi 1998</div>
-        <p>Ketua MPR dan tokoh Muhammadiyah yang menjadi lokomotif gerakan reformasi. Memimpin demonstrasi besar di depan Gedung DPR pada 20 Mei 1998.</p>
-      </div>
-      <div class="tokoh-card fade-in">
-        <div class="tokoh-initial">MS</div>
-        <h3>Megawati Soekarnoputri</h3>
-        <div class="role">Presiden ke-5 RI (2001&ndash;2004)</div>
-        <p>Pemimpin PDI-P yang menjadi simbol perlawanan rakyat. Mendirikan KPK (UU No.30/2002) dan menstabilkan politik pasca-Gus Dur.</p>
-      </div>
-      <div class="tokoh-card fade-in">
-        <div class="tokoh-initial">GD</div>
-        <h3>Abdurrahman Wahid</h3>
-        <div class="role">Presiden ke-4 RI (1999&ndash;2001)</div>
-        <p>Dikenal sebagai Gus Dur. Mencabut larangan Marxisme-Leninisme, memberikan otonomi khusus Papua, dan mendukung pluralisme &mdash; namun di-impeach MPR pada 2001.</p>
-      </div>
-      <div class="tokoh-card fade-in">
-        <div class="tokoh-initial">&#9670;</div>
-        <h3>Mahasiswa 1998</h3>
-        <div class="role">Garda Depan Reformasi</div>
-        <p>Ribuan mahasiswa dari seluruh Indonesia &mdash; rela kehilangan waktu studi, ditangkap, bahkan nyawa &mdash; demi memperjuangkan demokrasi yang kini kita nikmati.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BAB 4: HASIL PERUBAHAN -->
-<section id="hasil">
-  <div class="container-wide">
-    <div class="section-label">Bab 4</div>
-    <h2 class="section-heading fade-in">Hasil &amp; Perubahan <em>Sistem</em></h2>
-    <p class="lead-text fade-in">Reformasi menghasilkan perubahan fundamental di hampir setiap aspek kehidupan berbangsa dan bernegara.</p>
-    <div class="hasil-grid">
-      <div class="hasil-item fade-in">
-        <span class="hasil-icon">&#9878;&#65039;</span>
-        <h3>Amandemen UUD 1945</h3>
-        <ul>
-          <li>Presiden maksimal 2 periode jabatan</li>
-          <li>DPR dan Presiden dipilih langsung rakyat</li>
-          <li>Penghapusan GBHN</li>
-          <li>Pembentukan DPD (Dewan Perwakilan Daerah)</li>
-          <li>Jaminan HAM Pasal 28A&ndash;28J yang kuat</li>
-        </ul>
-      </div>
-      <div class="hasil-item fade-in">
-        <span class="hasil-icon">&#129686;</span>
-        <h3>Penghapusan Dwifungsi ABRI</h3>
-        <ul>
-          <li>TNI tidak lagi memiliki kursi di DPR</li>
-          <li>Polri dipisahkan dari TNI secara struktural</li>
-          <li>Militer fokus pada pertahanan negara</li>
-        </ul>
-      </div>
-      <div class="hasil-item fade-in">
-        <span class="hasil-icon">&#128506;&#65039;</span>
-        <h3>Otonomi Daerah</h3>
-        <ul>
-          <li>UU No. 22/1999 &amp; UU No. 32/2004</li>
-          <li>Daerah berwenang urus pendidikan, kesehatan</li>
-          <li>Pilkada langsung kepala daerah</li>
-          <li>Dana perimbangan pusat&ndash;daerah</li>
-        </ul>
-      </div>
-      <div class="hasil-item fade-in">
-        <span class="hasil-icon">&#128240;</span>
-        <h3>Kebebasan Pers &amp; Demokrasi</h3>
-        <ul>
-          <li>UU No. 40/1999 tentang Pers bebas</li>
-          <li>Puluhan TV swasta, koran, dan portal online</li>
-          <li>48 partai peserta Pemilu 1999</li>
-          <li>Tidak ada lagi pembredelan media</li>
-        </ul>
-      </div>
-      <div class="hasil-item fade-in">
-        <span class="hasil-icon">&#128269;</span>
-        <h3>Pemberantasan KKN</h3>
-        <ul>
-          <li>Pembentukan KPK tahun 2002</li>
-          <li>Pengadilan Tipikor yang independen</li>
-          <li>Penanganan kasus BLBI, Bank Century, e-KTP</li>
-          <li>Deklarasi kekayaan pejabat publik</li>
-        </ul>
-      </div>
-      <div class="hasil-item fade-in">
-        <span class="hasil-icon">&#129309;</span>
-        <h3>Perdamaian &amp; HAM</h3>
-        <ul>
-          <li>MoU Helsinki 2005 &mdash; perdamaian Aceh</li>
-          <li>Pendirian Komnas HAM yang independen</li>
-          <li>Pembubaran DOM (Operasi Militer) di Aceh</li>
-          <li>Peradilan HAM berat mulai diproses</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BAB 5: DAMPAK -->
+<!-- BAB 3: DAMPAK REFORMASI -->
 <section id="dampak">
   <div class="container-wide">
-    <div class="section-label">Bab 5</div>
+    <div class="section-label">Bab 3</div>
     <h2 class="section-heading">Dampak <em>Reformasi</em></h2>
-    <p class="lead-text">Reformasi membawa angin segar &mdash; sekaligus membuka luka-luka lama yang tersimpan di bawah permukaan Orde Baru.</p>
+    <p class="lead-text">Dampak reformasi sangat luas dan beragam &mdash; membawa demokrasi yang lebih terbuka sekaligus meninggalkan luka konflik horizontal di berbagai daerah.</p>
     <div class="dampak-cols fade-in">
       <div class="dampak-col positif">
         <h3>Dampak Positif</h3>
         <ul>
-          <li>Rakyat memilih pemimpin secara langsung &mdash; presiden, gubernur, bupati/walikota</li>
-          <li>Kebebasan berpendapat, berserikat, dan berkumpul tanpa represi</li>
-          <li>Media bebas tanpa sensor dan pembredelan politik</li>
-          <li>Perdamaian Aceh melalui MoU Helsinki 2005</li>
-          <li>Lahirnya lembaga HAM independen dan peradilan yang lebih terbuka</li>
-          <li>Desentralisasi kekuasaan ke daerah kabupaten/kota</li>
+          <li>Rakyat dapat memilih presiden secara langsung &mdash; kedaulatan benar-benar di tangan rakyat</li>
+          <li>Kebebasan pers pulih &mdash; media tidak lagi dibredel atau disensor pemerintah</li>
+          <li>Partai politik dapat didirikan dengan bebas &mdash; 48 partai di Pemilu 1999</li>
+          <li>HAM mendapat jaminan konstitusional melalui amandemen UUD 1945</li>
+          <li>Struktur ketatanegaraan berubah dari sentralistik menjadi desentralistik</li>
+          <li>Sistem pemerintahan berubah dari otoriter menjadi demokratis</li>
         </ul>
       </div>
       <div class="dampak-col negatif">
         <h3>Dampak Negatif</h3>
         <ul>
-          <li>Konflik horizontal Ambon 1999&ndash;2002: bentrokan Kristen&ndash;Islam</li>
+          <li>Konflik horizontal Ambon 1999&ndash;2002: bentrokan Kristen&ndash;Islam memakan ribuan korban</li>
           <li>Kekerasan di Poso, Sulawesi Tengah (1998&ndash;2001)</li>
           <li>Konflik suku Dayak&ndash;Madura di Sambas &amp; Sampit, Kalimantan</li>
           <li>Timor Timur lepas dari NKRI melalui referendum 1999</li>
-          <li>Instabilitas politik: Gus Dur di-impeach MPR tahun 2001</li>
-          <li>Korupsi bertransformasi &mdash; lebih tersembunyi namun tetap sistemik</li>
+          <li>Instabilitas politik: Presiden Abdurrahman Wahid di-impeach MPR tahun 2001</li>
+          <li>Korupsi tidak serta-merta hilang &mdash; bahkan tetap sistemik hingga saat ini</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- BAB 6: ERA PRESIDEN -->
-<section id="presiden">
+<!-- BAB 4: DEMOKRASI REFORMASI -->
+<section id="demokrasi" class="on-dark">
   <div class="container-wide">
-    <div class="section-label">Bab 6</div>
-    <h2 class="section-heading fade-in">Reformasi Menurut <em>Era Presiden</em></h2>
-    <p class="lead-text fade-in">Lima presiden, dua dekade perjalanan &mdash; masing-masing meninggalkan jejak yang berbeda dalam sejarah Reformasi Indonesia.</p>
-    <div class="presiden-list">
+    <div class="section-label">Bab 4</div>
+    <h2 class="section-heading fade-in">Definisi &amp; Hakikat <em>Demokrasi Reformasi</em></h2>
+    <p class="lead-text fade-in">Demokrasi reformasi berbeda secara fundamental dengan demokrasi semu ala Orde Baru &mdash; bukan sekadar prosedur, melainkan sistem yang menempatkan kedaulatan nyata di tangan rakyat.</p>
 
-      <div class="presiden-item fade-in">
-        <div class="presiden-sidebar">
-          <div class="presiden-num">03</div>
-          <div class="presiden-name">B.J. Habibie</div>
-          <div class="presiden-period">1998 &mdash; 1999</div>
-        </div>
-        <div class="presiden-body">
-          <div class="prestasi">
-            <h4>Prestasi</h4>
-            <ul>
-              <li>Memberi kebebasan pers dan berpendapat</li>
-              <li>TAP MPR No. XVII/1998 tentang HAM</li>
-              <li>Membuka jalan bagi multi-partai dan pemilu bebas</li>
-            </ul>
-          </div>
-          <div class="kelemahan">
-            <h4>Kontroversi</h4>
-            <ul>
-              <li>Mengizinkan referendum Timor Timur &rarr; lepas dari NKRI</li>
-              <li>Dikritik habis-habisan oleh kalangan nasionalis</li>
-            </ul>
+    <div class="demokrasi-layout">
+      <div class="demokrasi-quote fade-in">
+        <blockquote>
+          "Kedaulatan berada di tangan rakyat dan dilaksanakan menurut Undang-Undang Dasar."
+        </blockquote>
+        <cite>Pasal 1 Ayat (2) UUD 1945 Hasil Amandemen</cite>
+        <div style="margin-top:2.5rem; padding-top:2rem; border-top:1px solid oklch(68.1% 0.162 75.834 / 0.2);">
+          <div style="font-family:var(--ff-mono);font-size:0.6rem;letter-spacing:0.2em;color:var(--t400);text-transform:uppercase;margin-bottom:1rem;">Pilar Utama</div>
+          <div style="display:flex;flex-direction:column;gap:0.75rem;">
+            <div style="display:flex;align-items:center;gap:0.75rem;font-family:var(--ff-display);font-size:0.95rem;color:var(--on-dark-dim);">
+              <span style="color:var(--y600);font-family:var(--ff-mono);font-size:0.7rem;">01</span> Supremasi Hukum
+            </div>
+            <div style="display:flex;align-items:center;gap:0.75rem;font-family:var(--ff-display);font-size:0.95rem;color:var(--on-dark-dim);">
+              <span style="color:var(--y600);font-family:var(--ff-mono);font-size:0.7rem;">02</span> Perlindungan HAM
+            </div>
+            <div style="display:flex;align-items:center;gap:0.75rem;font-family:var(--ff-display);font-size:0.95rem;color:var(--on-dark-dim);">
+              <span style="color:var(--y600);font-family:var(--ff-mono);font-size:0.7rem;">03</span> Transparansi Publik
+            </div>
+            <div style="display:flex;align-items:center;gap:0.75rem;font-family:var(--ff-display);font-size:0.95rem;color:var(--on-dark-dim);">
+              <span style="color:var(--y600);font-family:var(--ff-mono);font-size:0.7rem;">04</span> Akuntabilitas Pemerintah
+            </div>
+            <div style="display:flex;align-items:center;gap:0.75rem;font-family:var(--ff-display);font-size:0.95rem;color:var(--on-dark-dim);">
+              <span style="color:var(--y600);font-family:var(--ff-mono);font-size:0.7rem;">05</span> Desentralisasi Kekuasaan
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="presiden-item fade-in">
-        <div class="presiden-sidebar">
-          <div class="presiden-num">04</div>
-          <div class="presiden-name">Abdurrahman Wahid</div>
-          <div class="presiden-period">1999 &mdash; 2001</div>
+      <div class="demokrasi-prinsip fade-in">
+        <div class="prinsip-item">
+          <div class="prinsip-num">Prinsip 01</div>
+          <h3>Bukan Demokrasi Prosedural</h3>
+          <p>Berbeda dengan Orde Baru yang hanya menjalankan prosedur pemilu tanpa substansi, demokrasi reformasi mensyaratkan kebebasan nyata, persaingan terbuka, dan hasil yang tidak ditentukan sebelumnya.</p>
         </div>
-        <div class="presiden-body">
-          <div class="prestasi">
-            <h4>Prestasi</h4>
-            <ul>
-              <li>Mencabut larangan ajaran Marxisme-Leninisme</li>
-              <li>Membubarkan Departemen Penerangan (anti-sensor)</li>
-              <li>Otonomi khusus Papua (UU No. 21/2001)</li>
-              <li>Mendukung pluralisme dan kebebasan beragama</li>
-            </ul>
-          </div>
-          <div class="kelemahan">
-            <h4>Kontroversi</h4>
-            <ul>
-              <li>Di-impeach MPR karena skandal Buloggate</li>
-              <li>Ketidakstabilan koalisi dan gaya pemerintahan yang kontroversial</li>
-            </ul>
-          </div>
+        <div class="prinsip-item">
+          <div class="prinsip-num">Prinsip 02</div>
+          <h3>Desentralisasi Kekuasaan</h3>
+          <p>Kekuasaan tidak lagi terpusat di Jakarta. Melalui otonomi daerah, rakyat di setiap kabupaten dan kota memiliki kendali nyata atas urusan lokal mereka.</p>
+          <ul>
+            <li>Pilkada langsung di seluruh daerah</li>
+            <li>DPRD lebih berdaya untuk checks and balances</li>
+            <li>Kebijakan sesuai kebutuhan lokal</li>
+          </ul>
+        </div>
+        <div class="prinsip-item">
+          <div class="prinsip-num">Prinsip 03</div>
+          <h3>Demokrasi Konstitusional</h3>
+          <p>Berlandaskan Pancasila dan UUD 1945 hasil amandemen &mdash; bukan demokrasi liberal tanpa batas, melainkan demokrasi yang dijaga oleh konstitusi dan lembaga-lembaga independen.</p>
         </div>
       </div>
-
-      <div class="presiden-item fade-in">
-        <div class="presiden-sidebar">
-          <div class="presiden-num">05</div>
-          <div class="presiden-name">Megawati Soekarnoputri</div>
-          <div class="presiden-period">2001 &mdash; 2004</div>
-        </div>
-        <div class="presiden-body">
-          <div class="prestasi">
-            <h4>Prestasi</h4>
-            <ul>
-              <li>Stabilitas politik pasca-gejolak Gus Dur</li>
-              <li>Membentuk KPK (UU No. 30/2002)</li>
-              <li>Penyelesaian konflik Ambon dan Poso</li>
-            </ul>
-          </div>
-          <div class="kelemahan">
-            <h4>Kontroversi</h4>
-            <ul>
-              <li>Kemiskinan dan pengangguran masih tinggi</li>
-              <li>Korupsi masih merajalela di berbagai sektor</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="presiden-item fade-in">
-        <div class="presiden-sidebar">
-          <div class="presiden-num">06</div>
-          <div class="presiden-name">Susilo Bambang Yudhoyono</div>
-          <div class="presiden-period">2004 &mdash; 2014</div>
-        </div>
-        <div class="presiden-body">
-          <div class="prestasi">
-            <h4>Prestasi</h4>
-            <ul>
-              <li>Pemilu presiden langsung pertama dalam sejarah RI</li>
-              <li>MoU Helsinki 2005 &mdash; perdamaian Aceh tercapai</li>
-              <li>Rekonstruksi masif pasca-tsunami Aceh 2004</li>
-              <li>Program BLT &amp; BSU untuk rakyat miskin</li>
-              <li>Pertumbuhan ekonomi stabil 6&ndash;7% per tahun</li>
-            </ul>
-          </div>
-          <div class="kelemahan">
-            <h4>Kontroversi</h4>
-            <ul>
-              <li>Korupsi sistemik: kasus Century, Wisma Atlet, Hambalang</li>
-              <li>Birokrasi lambat dan reform setengah hati</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="presiden-item fade-in">
-        <div class="presiden-sidebar">
-          <div class="presiden-num">07</div>
-          <div class="presiden-name">Joko Widodo</div>
-          <div class="presiden-period">2014 &mdash; 2024</div>
-        </div>
-        <div class="presiden-body">
-          <div class="prestasi">
-            <h4>Prestasi</h4>
-            <ul>
-              <li>Pembangunan infrastruktur massal: tol Trans-Jawa, MRT, LRT, bandara baru</li>
-              <li>Reformasi birokrasi: e-government dan e-budgeting</li>
-              <li>Penanganan pandemi COVID-19 dengan vaksinasi massal</li>
-              <li>Hilirisasi industri nikel dan smelter</li>
-              <li>Pemindahan Ibu Kota Negara ke Kalimantan Timur (IKN Nusantara)</li>
-            </ul>
-          </div>
-          <div class="kelemahan">
-            <h4>Kontroversi</h4>
-            <ul>
-              <li>Demokrasi dikritik: politisasi aparat dan instrumen negara</li>
-              <li>UU Cipta Kerja kontroversial &mdash; dinilai merugikan buruh</li>
-              <li>Deforestasi dan konflik agraria di berbagai daerah</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- BAB 7: KESIMPULAN -->
+<!-- BAB 5: AMANDEMEN UUD 1945 -->
+<section id="amandemen">
+  <div class="container-wide">
+    <div class="section-label fade-in">Bab 5</div>
+    <h2 class="section-heading fade-in">Amandemen UUD 1945 <em>sebagai Fondasi</em></h2>
+    <p class="lead-text fade-in">Empat kali amandemen (1999&ndash;2002) mengubah secara radikal struktur ketatanegaraan Indonesia &mdash; dari sistem presidensial super-kuat menjadi sistem yang seimbang dan demokratis.</p>
+
+    <div class="amandemen-layout">
+      <div class="amandemen-list">
+        <div class="amandemen-item fade-in">
+          <div class="amandemen-num">01</div>
+          <div class="amandemen-body">
+            <div class="pasal">Pasal 7</div>
+            <h3>Pembatasan Masa Jabatan Presiden</h3>
+            <p>Presiden maksimal dua periode &mdash; mengakhiri kemungkinan kekuasaan seumur hidup seperti yang terjadi di era Orde Baru selama 32 tahun.</p>
+          </div>
+        </div>
+        <div class="amandemen-item fade-in">
+          <div class="amandemen-num">02</div>
+          <div class="amandemen-body">
+            <div class="pasal">Pasal 6A</div>
+            <h3>Pemilihan Presiden Langsung</h3>
+            <p>Presiden dan wakil presiden dipilih langsung oleh rakyat dalam satu paket, menggantikan sistem pemilihan oleh MPR yang selama Orde Baru hanya bersifat formalitas.</p>
+          </div>
+        </div>
+        <div class="amandemen-item fade-in">
+          <div class="amandemen-num">03</div>
+          <div class="amandemen-body">
+            <div class="pasal">Pasal 22C</div>
+            <h3>Pembentukan DPD</h3>
+            <p>Dewan Perwakilan Daerah dibentuk sebagai perwakilan daerah di tingkat pusat. MPR tidak lagi menjadi lembaga tertinggi negara.</p>
+          </div>
+        </div>
+        <div class="amandemen-item fade-in">
+          <div class="amandemen-num">04</div>
+          <div class="amandemen-body">
+            <div class="pasal">Penghapusan</div>
+            <h3>Penghapusan GBHN</h3>
+            <p>Garis-Garis Besar Haluan Negara dihapus. Presiden memiliki program sendiri yang dipertanggungjawabkan langsung kepada rakyat pemilih.</p>
+          </div>
+        </div>
+        <div class="amandemen-item fade-in">
+          <div class="amandemen-num">05</div>
+          <div class="amandemen-body">
+            <div class="pasal">Pasal 28A&ndash;28J</div>
+            <h3>Penguatan Hak Asasi Manusia</h3>
+            <p>Hak sipil, politik, ekonomi, sosial, dan budaya dijamin secara konstitusional. Negara wajib melindungi dan memenuhi HAM setiap warga negara.</p>
+          </div>
+        </div>
+        <div class="amandemen-item fade-in">
+          <div class="amandemen-num">06</div>
+          <div class="amandemen-body">
+            <div class="pasal">Sistem Baru</div>
+            <h3>Checks &amp; Balances Antar Lembaga</h3>
+            <p>Mahkamah Konstitusi, Komisi Yudisial, dan BPK independen dibentuk untuk memastikan tidak ada satu lembaga pun yang berkuasa tanpa pengawasan.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="amandemen-sidebar">
+        <div class="amandemen-sidebar-card fade-in">
+          <div class="big-num" data-count="4" data-suffix="x">4x</div>
+          <h4>Tahap Amandemen</h4>
+          <p>1999, 2000, 2001, dan 2002 &mdash; proses paling komprehensif dalam sejarah konstitusi Indonesia.</p>
+        </div>
+        <div class="amandemen-sidebar-card fade-in">
+          <div class="big-num" data-count="37">37</div>
+          <h4>Pasal Diubah</h4>
+          <p>Dari 37 pasal asli UUD 1945, hampir seluruhnya mengalami perubahan substansial.</p>
+        </div>
+        <div class="amandemen-sidebar-card fade-in">
+          <div class="big-num">1945</div>
+          <h4>Tetap Berlaku</h4>
+          <p>Meski diamandemen, UUD 1945 tetap menjadi konstitusi dasar &mdash; bukan diganti, melainkan disempurnakan.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BAB 6: PEMILU LANGSUNG -->
+<section id="pemilu">
+  <div class="container-wide">
+    <div class="section-label fade-in">Bab 6</div>
+    <h2 class="section-heading fade-in">Pemilu Langsung <em>Pilar Demokrasi</em></h2>
+    <p class="lead-text fade-in">Tiga tonggak pemilu langsung yang mengubah cara Indonesia memilih pemimpinnya &mdash; dari legislatif, presiden, hingga kepala daerah di seluruh pelosok negeri.</p>
+
+    <div class="pemilu-milestones">
+      <div class="milestone-card fade-in">
+        <div class="milestone-year">1999</div>
+        <h3>Pemilu Legislatif Pertama</h3>
+        <p>Pemilu paling bebas dan beragam dalam sejarah Indonesia modern &mdash; diikuti 48 partai, jauh berbeda dari era Orde Baru yang hanya tiga partai.</p>
+        <ul>
+          <li>48 partai politik peserta pemilu</li>
+          <li>Golkar, PPP, PDI tidak lagi mendominasi</li>
+          <li>Pemilu pertama tanpa tekanan militer</li>
+          <li>Partisipasi rakyat melonjak signifikan</li>
+        </ul>
+      </div>
+      <div class="milestone-card fade-in">
+        <div class="milestone-year">2004</div>
+        <h3>Pilpres Langsung Pertama</h3>
+        <p>Untuk pertama kalinya rakyat Indonesia memilih presiden secara langsung. SBY&ndash;JK menang atas Megawati dalam dua putaran yang demokratis.</p>
+        <ul>
+          <li>Rakyat memilih langsung, bukan MPR</li>
+          <li>Dua putaran pemilihan yang kompetitif</li>
+          <li>Legitimasi presiden langsung dari rakyat</li>
+          <li>Tonggak demokrasi reformasi sesungguhnya</li>
+        </ul>
+      </div>
+      <div class="milestone-card fade-in">
+        <div class="milestone-year">2005</div>
+        <h3>Pilkada Langsung Pertama</h3>
+        <p>UU No. 32/2004 menghadirkan pilkada langsung &mdash; gubernur, bupati, walikota dipilih rakyat daerahnya, bukan lagi ditunjuk DPRD.</p>
+        <ul>
+          <li>Demokrasi lokal menjadi kenyataan</li>
+          <li>Pemimpin daerah akuntabel ke konstituen</li>
+          <li>Menggantikan sistem pengangkatan DPRD</li>
+          <li>Berlaku di seluruh Indonesia serentak</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pemilu-bottom">
+      <div class="pemilu-bottom-card fade-in">
+        <h3>Dampak Positif Pemilu Langsung</h3>
+        <ul>
+          <li>Partisipasi politik rakyat meningkat signifikan</li>
+          <li>Pemimpin lebih akuntabel kepada konstituen langsung</li>
+          <li>Persaingan ide dan program antar kandidat terbuka</li>
+          <li>Legitimasi pemimpin lebih kuat karena dipilih rakyat</li>
+          <li>Pemilu 2024: lebih dari 200 juta pemilih terdaftar</li>
+        </ul>
+      </div>
+      <div class="pemilu-bottom-card fade-in">
+        <h3>Tantangan yang Belum Selesai</h3>
+        <ul>
+          <li>Biaya politik sangat mahal mendorong korupsi</li>
+          <li>Politik uang (money politics) masih marak</li>
+          <li>Polarisasi masyarakat akibat persaingan kandidat</li>
+          <li>Dinasti politik lokal tumbuh di berbagai daerah</li>
+          <li>Sistem terus disempurnakan dari pemilu ke pemilu</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BAB 7: KEBEBASAN PERS -->
+<section id="pers" class="on-dark">
+  <div class="container-wide">
+    <div class="section-label">Bab 7</div>
+    <h2 class="section-heading fade-in">Kebebasan Pers, Berpendapat <em>&amp; Hak Berserikat</em></h2>
+    <p class="lead-text fade-in">Salah satu indikator paling jelas dari demokrasi reformasi adalah pulihnya kebebasan yang selama Orde Baru dibredel dan dibatasi.</p>
+
+    <div class="pers-layout">
+      <div class="pers-card featured fade-in">
+        <div>
+          <div class="pers-stat">UU 40</div>
+          <div class="pers-stat-label">Tahun 1999 tentang Pers</div>
+        </div>
+        <div>
+          <h3>Kebebasan Pers Dijamin Hukum</h3>
+          <p>Pemerintah tidak lagi berwenang mencabut izin atau membredel media. Pers bebas mengkritik pemerintah tanpa ancaman penutupan paksa &mdash; berbeda 180 derajat dari era Orde Baru.</p>
+          <ul>
+            <li>Pembredelan media oleh negara resmi dilarang</li>
+            <li>Lahirnya puluhan TV swasta: Trans TV, Metro TV, TV One</li>
+            <li>Ratusan koran, tabloid, dan portal berita baru</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pers-card fade-in">
+        <h3>Kebebasan Berpendapat</h3>
+        <p>Dijamin Pasal 28E ayat (3) UUD 1945. Demonstrasi dan unjuk rasa menjadi hal sah dan biasa.</p>
+        <ul>
+          <li>Kritik kepada pemerintah tidak berujung penjara</li>
+          <li>Unjuk rasa dilindungi konstitusi</li>
+          <li>Berbeda dengan Orde Baru yang merespons dengan tembakan</li>
+        </ul>
+      </div>
+      <div class="pers-card fade-in">
+        <h3>Hak Berserikat &amp; Berkumpul</h3>
+        <p>Ribuan ormas, LSM, dan serikat pekerja baru lahir pasca 1998.</p>
+        <ul>
+          <li>Kontras, Imparsial, ICW, LBH Masyarakat</li>
+          <li>Serikat buruh bebas berorganisasi</li>
+          <li>Masyarakat sipil jadi kekuatan pengawas nyata</li>
+        </ul>
+      </div>
+      <div class="pers-card fade-in">
+        <h3>Media Digital &amp; Online</h3>
+        <p>Ratusan portal berita online tumbuh pesat. Informasi mengalir bebas tanpa sensor pemerintah.</p>
+        <ul>
+          <li>Citizen journalism berkembang pesat</li>
+          <li>Media sosial memperluas ruang publik</li>
+          <li>Tantangan baru: hoaks dan disinformasi</li>
+        </ul>
+      </div>
+      <div class="pers-card fade-in">
+        <h3>Partai Politik Bebas</h3>
+        <p>Siapapun dapat mendirikan partai. Dari 3 partai Orde Baru menjadi 48 peserta Pemilu 1999.</p>
+        <ul>
+          <li>Pluralisme politik menjadi kenyataan</li>
+          <li>Kompetisi ide dan program terbuka lebar</li>
+          <li>Tidak ada lagi partai tunggal yang mendominasi</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BAB 8: REFORMASI ABRI -->
+<section id="abri">
+  <div class="container-wide">
+    <div class="section-label fade-in">Bab 8</div>
+    <h2 class="section-heading fade-in">Penghapusan Dwifungsi ABRI <em>&amp; Reformasi Keamanan</em></h2>
+    <p class="lead-text fade-in">Demokrasi tidak mungkin terwujud selama militer masih berkuasa di ranah sipil dan politik. Dwifungsi ABRI harus dihapus &mdash; dan itulah yang terjadi.</p>
+
+    <div class="abri-compare fade-in">
+      <div class="abri-before">
+        <h3>Sebelum Reformasi</h3>
+        <ul>
+          <li>75 kursi DPR untuk militer tanpa pemilu</li>
+          <li>Perwira militer menjadi gubernur &amp; bupati</li>
+          <li>Militer mengendalikan BUMN strategis</li>
+          <li>Aparat keamanan terlibat langsung dalam politik</li>
+          <li>Polri berada di bawah komando TNI</li>
+          <li>Tidak ada akuntabilitas militer kepada sipil</li>
+        </ul>
+      </div>
+      <div class="abri-divider"></div>
+      <div class="abri-after">
+        <h3>Setelah Reformasi</h3>
+        <ul>
+          <li>Kursi TNI di DPR dihapus total setelah Pemilu 2004</li>
+          <li>Militer tidak lagi menjabat posisi sipil</li>
+          <li>TNI dikembalikan ke fungsi pertahanan negara</li>
+          <li>Aparat keamanan netral dari politik praktis</li>
+          <li>Polri dipisahkan dari TNI sejak 1999</li>
+          <li>TNI tunduk pada supremasi hukum sipil</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="abri-reform fade-in">
+      <div class="abri-reform-item">
+        <h4>TAP MPR No. VI/MPR/2000</h4>
+        <p>Landasan hukum pemisahan TNI dan Polri secara resmi dan permanen.</p>
+      </div>
+      <div class="abri-reform-item">
+        <h4>Doktrin TNI Profesional</h4>
+        <p>TNI profesional, modern, dan tidak berbisnis di luar fungsi pertahanan negara.</p>
+      </div>
+      <div class="abri-reform-item">
+        <h4>Polri Independen</h4>
+        <p>Polri berada langsung di bawah presiden, bukan di bawah panglima TNI.</p>
+      </div>
+      <div class="abri-reform-item">
+        <h4>Akuntabilitas ke DPR</h4>
+        <p>Anggaran dan kebijakan TNI diawasi DPR sebagai representasi rakyat.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BAB 9: OTONOMI DAERAH -->
+<section id="otonomi" class="on-dark">
+  <div class="container-wide">
+    <div class="section-label">Bab 9</div>
+    <h2 class="section-heading fade-in">Otonomi Daerah <em>&amp; Demokrasi Lokal</em></h2>
+    <p class="lead-text fade-in">Kekuasaan tidak lagi terpusat di Jakarta. Melalui otonomi daerah, rakyat di setiap kabupaten dan kota mendapat kendali nyata atas urusan mereka sendiri.</p>
+
+    <div class="otonomi-layout">
+      <div class="otonomi-stats fade-in">
+        <div class="otonomi-stat">
+          <div class="otonomi-stat-num" data-count="514">514</div>
+          <div class="otonomi-stat-label">Kabupaten/Kota</div>
+          <div class="otonomi-stat-desc">Seluruhnya kini memiliki otonomi penuh dalam urusan lokal</div>
+        </div>
+        <div class="otonomi-stat">
+          <div class="otonomi-stat-num" data-count="34">34</div>
+          <div class="otonomi-stat-label">Provinsi</div>
+          <div class="otonomi-stat-desc">Gubernur dipilih langsung oleh rakyat sejak 2005</div>
+        </div>
+        <div class="otonomi-stat">
+          <div class="otonomi-stat-num" data-count="5">5</div>
+          <div class="otonomi-stat-label">Urusan Pusat</div>
+          <div class="otonomi-stat-desc">Luar negeri, pertahanan, keamanan, moneter, agama</div>
+        </div>
+        <div class="otonomi-stat">
+          <div class="otonomi-stat-num">UU 22</div>
+          <div class="otonomi-stat-label">Tahun 1999</div>
+          <div class="otonomi-stat-desc">Landasan hukum otonomi daerah yang luas dan nyata</div>
+        </div>
+      </div>
+
+      <div class="otonomi-content fade-in">
+        <div class="otonomi-item">
+          <h3>Kewenangan Daerah Diperluas</h3>
+          <p>Pendidikan, kesehatan, pekerjaan umum, pertanian, perhubungan, dan investasi kini dikelola daerah &mdash; bukan lagi instruksi dari Jakarta.</p>
+        </div>
+        <div class="otonomi-item">
+          <h3>Demokrasi Lokal yang Nyata</h3>
+          <p>Rakyat mengawasi langsung kepala daerah mereka. DPRD lebih berdaya untuk checks and balances terhadap bupati dan walikota.</p>
+        </div>
+        <div class="otonomi-item">
+          <h3>Dana Perimbangan</h3>
+          <p>Sistem bagi hasil antara pusat dan daerah memastikan daerah memiliki sumber daya untuk menjalankan otonominya secara nyata.</p>
+        </div>
+        <div class="otonomi-item">
+          <h3>Tantangan yang Belum Selesai</h3>
+          <p>Kesenjangan antar daerah melebar, dinasti politik lokal tumbuh, dan korupsi di tingkat daerah justru lebih parah. Otonomi terus disempurnakan.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BAB 10: KESIMPULAN & REFLEKSI -->
 <section id="kesimpulan">
   <div class="container">
-    <div class="section-label">Bab 7</div>
-    <h2 class="section-heading fade-in">Refleksi untuk <em>Generasi Muda</em></h2>
-    <p class="lead-text fade-in">Era Reformasi bukan sekadar pergantian rezim &mdash; melainkan perubahan kesadaran kolektif bangsa. Dari takut menjadi berani. Dari diam menjadi kritis.</p>
+    <div class="section-label">Bab 10</div>
+    <h2 class="section-heading fade-in">Kesimpulan, Saran <em>&amp; Refleksi Generasi Muda</em></h2>
+    <p class="lead-text fade-in">Demokrasi reformasi Indonesia telah berjalan lebih dari seperempat abad (1998&ndash;2026). Perjalanan panjang ini menunjukkan kemajuan nyata &mdash; sekaligus tantangan yang belum selesai.</p>
 
     <div class="nilai-grid">
       <div class="nilai-card fade-in">
-        <span class="nilai-icon">&#128483;&#65039;</span>
+        <span class="nilai-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9v6h4l5 5V4L7 9H3z"/><path d="M17 9a4 4 0 0 1 0 6"/></svg></span>
         <h4>Gunakan Suara dengan Bijak</h4>
-        <p>Kemerdekaan berpendapat yang kini kita miliki adalah hasil perjuangan. Kritik yang membangun, bukan anarkis.</p>
+        <p>Gunakan hak pilihmu secara cerdas. Tolak politik uang. Kritis kepada pemerintah tapi tetap santun dan berdasar fakta.</p>
       </div>
       <div class="nilai-card fade-in">
-        <span class="nilai-icon">&#128683;</span>
+        <span class="nilai-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/></svg></span>
         <h4>Tolak Segala Bentuk KKN</h4>
-        <p>Jangan ulangi kesalahan Orde Baru. Tolak korupsi, kolusi, dan nepotisme &mdash; mulai dari lingkungan sekitarmu.</p>
+        <p>Korupsi masih sistemik. Penguatan KPK, penyederhanaan partai, dan pemilu yang berkeadilan adalah agenda yang belum selesai.</p>
       </div>
       <div class="nilai-card fade-in">
-        <span class="nilai-icon">&#128499;&#65039;</span>
-        <h4>Aktiflah Sebagai Warga</h4>
-        <p>Gunakan hak pilih, awasi jalannya pemerintahan, dan laporkan korupsi jika kamu menemuinya.</p>
+        <span class="nilai-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+        <h4>Aktiflah dalam Organisasi</h4>
+        <p>Aktiflah dalam organisasi kemasyarakatan. Masyarakat sipil yang kuat adalah penjaga demokrasi yang paling efektif.</p>
       </div>
       <div class="nilai-card fade-in">
-        <span class="nilai-icon">&#128330;&#65039;</span>
+        <span class="nilai-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></span>
         <h4>Hargai Perjuangan 1998</h4>
-        <p>Mereka rela rugi masa studi, ditangkap, bahkan gugur demi demokrasi yang kini kita hirup setiap hari.</p>
+        <p>Jangan sia-siakan kebebasan yang diperjuangkan mahasiswa 1998 dengan darah dan air mata. Rawat demokrasi ini setiap hari.</p>
+      </div>
+      <div class="nilai-card fade-in">
+        <span class="nilai-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
+        <h4>Pendidikan Politik Sejak Dini</h4>
+        <p>Pendidikan politik yang masif sejak dini adalah kunci keberlanjutan demokrasi reformasi untuk generasi mendatang.</p>
+      </div>
+      <div class="nilai-card fade-in">
+        <span class="nilai-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="3" x2="12" y2="21"/><path d="M3 6l9-3 9 3"/><path d="M3 6l4.5 9c.83 1.67 3.17 1.67 4 0L16 6"/><path d="M8 15H3"/><path d="M21 6l-4.5 9c-.83 1.67-3.17 1.67-4 0L8 6"/><path d="M16 15h5"/><line x1="8" y1="21" x2="16" y2="21"/></svg></span>
+        <h4>Jaga Supremasi Hukum</h4>
+        <p>Aparat penegak hukum yang independen dan tidak berpihak adalah syarat mutlak demokrasi yang sehat dan bermartabat.</p>
       </div>
     </div>
 
     <div class="quote-block fade-in">
       <blockquote>
+        "Bangsa yang besar adalah bangsa yang mampu menjadi tuan rumah bagi perbedaan. Demokrasi bukan sekadar sistem, tetapi cara hidup yang menghargai kebebasan, persamaan, dan persaudaraan."
+      </blockquote>
+      <cite>Abdurrahman Wahid (Gus Dur) &mdash; Presiden ke-4 Republik Indonesia</cite>
+    </div>
+
+    <div class="quote-block fade-in" style="margin-top:2rem; border-left-color: var(--red-accent);">
+      <blockquote>
         "Reformasi belum selesai selama masih ada anak Indonesia yang kelaparan, bodoh, dan tidak berkeadilan. Reformasi sejati adalah perubahan di hati dan tindakan kita."
       </blockquote>
-      <cite>Refleksi Era Reformasi Indonesia</cite>
+      <cite>Refleksi Era Reformasi Indonesia 1998&ndash;2026</cite>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="logo">Reformasi Indonesia</div>
+  <div class="logo">Demokrasi Reformasi</div>
   <div class="footer-divider"></div>
-  <p>Materi Sejarah Era Reformasi 1998&ndash;2024</p>
+  <p>Materi Website: Demokrasi Reformasi Indonesia 1998&ndash;2026</p>
   <p style="margin-top:0.5rem">Disusun berdasarkan sumber sejarah primer dan sekunder</p>
 </footer>
 
 <script src="js/main.js"></script>
-
 </body>
 </html>

@@ -1,58 +1,176 @@
-/* ─── BAB 4: HASIL PERUBAHAN ─── */
-#hasil {
-  background: var(--cream);
-}
+﻿/* ================================================================
+   SHARED CARD GRID + Per-section overrides
+   ================================================================ */
 
+/* ── Base card grid ── */
 .hasil-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   gap: 2px;
   margin-top: 3rem;
 }
 
 .hasil-item {
-  padding: 2rem;
-  background: var(--primary-xlight);
-  border-top: 3px solid var(--primary);
-  transition: transform 0.2s, background 0.2s;
+  padding: 2rem 1.75rem;
+  background: var(--t50);
+  border-top: 2px solid var(--t200);
+  transition: transform 0.22s, background 0.22s, border-top-color 0.22s;
 }
-
 .hasil-item:hover {
   transform: translateY(-4px);
-  background: var(--primary-light);
+  background: var(--t100);
+  border-top-color: var(--y600);
 }
 
 .hasil-icon {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  margin-bottom: 0.8rem;
   display: block;
   line-height: 1;
 }
 
 .hasil-item h3 {
   font-family: var(--ff-display);
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  color: var(--primary-dark);
-  margin-bottom: 0.75rem;
+  color: var(--ink);
+  margin-bottom: 0.65rem;
 }
 
-.hasil-item ul {
-  list-style: none;
-}
-
+.hasil-item ul { list-style: none; }
 .hasil-item ul li {
-  font-size: 0.88rem;
+  font-size: 0.85rem;
   color: var(--ink-muted);
-  padding: 0.35rem 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 0.3rem 0;
+  border-bottom: 1px solid oklch(0% 0 0 / 0.06);
   display: flex;
-  gap: 0.6rem;
+  gap: 0.5rem;
   line-height: 1.5;
 }
-
 .hasil-item ul li::before {
-  content: '✓';
-  color: var(--green-accent);
+  content: '\2713';
+  color: var(--y600);
   flex-shrink: 0;
+  font-family: var(--ff-mono);
+  font-size: 0.75rem;
 }
+
+/* ================================================================
+   BAB 4: DEMOKRASI — Dark Stone 800 · 3-col cards
+   ================================================================ */
+#demokrasi {
+  background: var(--s800);
+  padding: 7rem 2rem;
+}
+#demokrasi .section-heading { color: var(--y400); }
+#demokrasi .section-heading em { color: var(--n100); font-style: italic; }
+#demokrasi .bg-card {
+  background: oklch(97% 0 0 / 0.04);
+  border-top: 2px solid oklch(68.1% 0.162 75.834 / 0.25);
+}
+#demokrasi .bg-card:hover {
+  background: oklch(97% 0 0 / 0.08);
+  border-top-color: var(--y600);
+}
+#demokrasi .bg-card-num {
+  background: linear-gradient(135deg, var(--y600), var(--y400));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0.15;
+}
+#demokrasi .bg-card h3 { color: var(--y400); }
+#demokrasi .bg-card p  { color: var(--on-dark-dim); }
+#demokrasi .bg-card ul li { color: var(--on-dark-dim); border-bottom-color: oklch(97% 0 0 / 0.07); }
+#demokrasi .bg-card ul li::before { color: var(--y600); }
+
+/* ================================================================
+   BAB 5: AMANDEMEN — Light Neutral 100 · 6-card bento grid
+   ================================================================ */
+#amandemen {
+  background: var(--n100);
+  padding: 7rem 2rem;
+}
+#amandemen .section-heading { color: var(--y600); }
+#amandemen .section-heading em { color: var(--ink); font-style: italic; }
+
+/* Bento: first card spans 2 cols */
+#amandemen .hasil-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+#amandemen .hasil-item:first-child {
+  grid-column: span 2;
+  background: var(--s900);
+  border-top-color: var(--y600);
+}
+#amandemen .hasil-item:first-child h3 { color: var(--y400); }
+#amandemen .hasil-item:first-child ul li { color: var(--on-dark-dim); border-bottom-color: oklch(97% 0 0 / 0.07); }
+#amandemen .hasil-item:first-child ul li::before { color: var(--y600); }
+#amandemen .hasil-item:first-child:hover { background: var(--s800); }
+
+@media (max-width: 768px) {
+  #amandemen .hasil-grid { grid-template-columns: 1fr; }
+  #amandemen .hasil-item:first-child { grid-column: span 1; }
+}
+
+/* ================================================================
+   BAB 6: PEMILU — Taupe 50 · 6-card grid
+   ================================================================ */
+#pemilu {
+  background: var(--t50);
+  padding: 7rem 2rem;
+}
+#pemilu .section-heading { color: var(--y600); }
+#pemilu .section-heading em { color: var(--ink); font-style: italic; }
+
+/* ================================================================
+   BAB 7: PERS — Dark Stone 900 · 6-card grid
+   ================================================================ */
+#pers {
+  background: var(--s900);
+  padding: 7rem 2rem;
+}
+#pers .section-heading { color: var(--y400); }
+#pers .section-heading em { color: var(--n100); font-style: italic; }
+#pers .hasil-item {
+  background: oklch(97% 0 0 / 0.04);
+  border-top-color: oklch(68.1% 0.162 75.834 / 0.3);
+}
+#pers .hasil-item:hover {
+  background: oklch(97% 0 0 / 0.08);
+  border-top-color: var(--y600);
+}
+#pers .hasil-item h3 { color: var(--y400); }
+#pers .hasil-item ul li { color: var(--on-dark-dim); border-bottom-color: oklch(97% 0 0 / 0.07); }
+#pers .hasil-item ul li::before { color: var(--y600); }
+
+/* ================================================================
+   BAB 8: ABRI — Light Neutral 100 · 3-col cards
+   ================================================================ */
+#abri {
+  background: var(--n100);
+  padding: 7rem 2rem;
+}
+#abri .section-heading { color: var(--y600); }
+#abri .section-heading em { color: var(--ink); font-style: italic; }
+
+/* ================================================================
+   BAB 9: OTONOMI — Stone 800 · 6-card grid
+   ================================================================ */
+#otonomi {
+  background: var(--s800);
+  padding: 7rem 2rem;
+}
+#otonomi .section-heading { color: var(--y400); }
+#otonomi .section-heading em { color: var(--n100); font-style: italic; }
+#otonomi .hasil-item {
+  background: oklch(97% 0 0 / 0.04);
+  border-top-color: oklch(68.1% 0.162 75.834 / 0.25);
+}
+#otonomi .hasil-item:hover {
+  background: oklch(97% 0 0 / 0.08);
+  border-top-color: var(--y600);
+}
+#otonomi .hasil-item h3 { color: var(--y400); }
+#otonomi .hasil-item ul li { color: var(--on-dark-dim); border-bottom-color: oklch(97% 0 0 / 0.07); }
+#otonomi .hasil-item ul li::before { color: var(--y600); }

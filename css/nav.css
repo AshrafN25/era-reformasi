@@ -1,64 +1,87 @@
-/* ─── NAV ─── */
+/* ── NAV ── */
 nav {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  background: rgba(10, 8, 6, 0.0);
-  backdrop-filter: blur(0px);
-  border-bottom: none;
-  padding: 0 2.5rem;
-  height: 60px;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  height: 58px;
+  padding: 0 4rem 0 4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: background 0.4s, backdrop-filter 0.4s, border-color 0.4s;
+  background: transparent;
+  transition: background 0.5s ease, backdrop-filter 0.5s ease, border-color 0.5s ease;
 }
 
-/* Scrolled state — added via JS */
 nav.scrolled {
-  background: rgba(10, 8, 6, 0.88);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(196, 152, 106, 0.15);
+  background: oklch(21.6% 0.006 56.043 / 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid oklch(68.1% 0.162 75.834 / 0.12);
 }
 
+/* Logo */
 .nav-logo {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  gap: 0.1rem;
+}
+
+.nav-logo .logo-main {
   font-family: var(--ff-display);
   font-size: 1.05rem;
   font-weight: 600;
-  color: var(--cream);
-  letter-spacing: 0.04em;
-  text-decoration: none;
-  line-height: 1;
+  color: var(--y400);
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
 }
 
-.nav-logo span {
-  display: block;
+.nav-logo .logo-sub {
   font-family: var(--ff-mono);
-  font-size: 0.58rem;
-  letter-spacing: 0.2em;
+  font-size: 0.52rem;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--gold-light);
-  margin-top: 0.1rem;
+  color: oklch(68.1% 0.162 75.834 / 0.55);
+  transition: color 0.2s ease;
 }
 
+.nav-logo:hover .logo-main { color: var(--y600); }
+
+/* Links */
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: 2.25rem;
   list-style: none;
 }
 
 .nav-links a {
   font-family: var(--ff-mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.12em;
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(250, 247, 242, 0.55);
+  color: oklch(87% 0 0 / 0.45);
   text-decoration: none;
-  transition: color 0.2s;
+  position: relative;
+  padding-bottom: 2px;
+  transition: color 0.2s ease;
 }
 
-.nav-links a:hover {
-  color: var(--cream);
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 1px;
+  background: var(--y600);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover        { color: var(--n100); }
+.nav-links a:hover::after { width: 100%; }
+.nav-links a.active       { color: var(--y400); }
+.nav-links a.active::after { width: 100%; background: var(--y600); }
+
+@media (max-width: 768px) {
+  nav { padding: 0 1.5rem; }
+  .nav-links { display: none; }
 }
