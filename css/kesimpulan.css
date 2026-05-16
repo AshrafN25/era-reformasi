@@ -2,9 +2,18 @@
    BAB 10: KESIMPULAN
    Layout: Light, full-width closing dengan nilai cards + quotes
    ================================================================ */
-#kesimpulan { background: var(--n100); padding: 7rem 2rem; }
-#kesimpulan .section-heading { color: var(--y600); }
-#kesimpulan .section-heading em { color: var(--ink); font-style: italic; }
+#kesimpulan { 
+  background: var(--n100); 
+  padding: 1rem 0 3rem;
+}
+
+#kesimpulan .container {
+  padding: 0 2rem;
+}
+
+#kesimpulan .section-heading { color: var(--y600) !important; }
+#kesimpulan .section-heading em { color: var(--ink) !important; font-style: italic; }
+#kesimpulan .lead-text { color: var(--ink) !important; }
 
 .nilai-grid {
   display: grid;
@@ -61,4 +70,89 @@
   color: var(--t400);
   text-transform: uppercase;
   font-style: normal;
+}
+
+/* ── Anggota Kelompok ── */
+.team-section {
+  margin: 5rem auto 0;
+  max-width: 800px;
+  text-align: center;
+}
+.team-intro {
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+  line-height: 1.7;
+  margin-top: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.team-title {
+  font-family: var(--ff-display);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--y600);
+  margin-bottom: 2.5rem;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.team-member {
+  text-align: center;
+}
+.team-photo {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--y600);
+  box-shadow: 0 4px 16px oklch(0% 0 0 / 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(135deg, var(--t200) 0%, var(--t100) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.team-photo.no-image::before {
+  content: '👤';
+  font-size: 4rem;
+  opacity: 0.3;
+}
+.team-member:hover .team-photo {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px oklch(0% 0 0 / 0.15);
+}
+.team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+.team-name {
+  font-family: var(--ff-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.25rem;
+}
+.team-number {
+  font-family: var(--ff-mono);
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .team-photo {
+    width: 140px;
+    height: 140px;
+  }
 }

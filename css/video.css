@@ -1,0 +1,335 @@
+/* ================================================================
+   BAB 10: VIDEO & MEDIA
+   ================================================================ */
+#video-media {
+  background: #1C1917;
+}
+#video-media .container {
+  padding: 5rem 0 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  
+}
+#video-media .section-label { color: var(--y600); }
+#video-media .section-label::after { background: var(--y600); opacity: 0.5; }
+#video-media .section-heading { color: var(--y400); }
+#video-media .section-heading em { color: var(--n100); font-style: italic; }
+#video-media .lead-text { color: var(--on-dark-dim); max-width: 100%; }
+
+/* ── Video grid ── */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+/* ── Video card ── */
+.video-card {
+  background: #28231F;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid oklch(97% 0 0 / 0.08);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.video-card:hover {
+  box-shadow: 0 8px 32px oklch(0% 0 0 / 0.4);
+  transform: translateY(-3px);
+  border-color: oklch(97% 0 0 / 0.14);
+}
+.video-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  background: #111;
+}
+.video-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.video-info { padding: 1rem 1.1rem 1.25rem; }
+.video-tag {
+  display: inline-block;
+  font-family: var(--ff-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--y600);
+  background: oklch(68.1% 0.162 75.834 / 0.12);
+  padding: 0.2rem 0.55rem;
+  border-radius: 2px;
+  margin-bottom: 0.55rem;
+}
+.video-info h4 {
+  font-family: var(--ff-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--n100);
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+}
+.video-info p {
+  font-size: 0.82rem;
+  color: var(--on-dark-dim);
+  line-height: 1.65;
+}
+.video-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-top: 1.75rem;
+  font-family: var(--ff-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  color: var(--t400);
+  line-height: 1.5;
+}
+.video-note svg { flex-shrink: 0; color: var(--t400); margin-top: 1px; }
+
+/* ================================================================
+   GALERI FOTO — Grid Sederhana
+   ================================================================ */
+.gallery-wrap {
+  margin-top: 4rem;
+  padding-top: 3.5rem;
+  border-top: 1px solid oklch(97% 0 0 / 0.08);
+}
+
+/* Header */
+.gallery-header { margin-bottom: 2rem; }
+
+.gallery-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--ff-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--y600);
+  margin-bottom: 0.85rem;
+}
+.gallery-eyebrow-line {
+  display: inline-block;
+  width: 1.75rem;
+  height: 1px;
+  background: var(--y600);
+  opacity: 0.6;
+}
+.gallery-title {
+  font-family: var(--ff-display);
+  font-size: clamp(1.4rem, 5vw, 2.2rem);
+  font-weight: 600;
+  color: var(--y400);
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+}
+.gallery-title em { color: var(--n100); font-style: italic; }
+.gallery-desc {
+  font-size: 0.88rem;
+  color: var(--on-dark-dim);
+  line-height: 1.7;
+  max-width: 68ch;
+  margin: 0;
+}
+
+/* Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+/* Item */
+.gallery-item {
+  margin: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #28231F;
+  border: 1px solid oklch(97% 0 0 / 0.08);
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 40px oklch(0% 0 0 / 0.5);
+  border-color: oklch(68.1% 0.162 75.834 / 0.3);
+}
+.gallery-item.img-error { display: none; }
+
+.gallery-img-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 62%;
+  overflow: hidden;
+  background: #1a1512;
+}
+.gallery-img-wrap img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.gallery-item:hover .gallery-img-wrap img { transform: scale(1.06); }
+
+.gallery-zoom-icon {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: oklch(0% 0 0 / 0.42);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+.gallery-item:hover .gallery-zoom-icon { opacity: 1; }
+
+/* Figcaption */
+.gallery-item figcaption { padding: 0.85rem 1rem 1rem; }
+.gallery-tag {
+  display: inline-block;
+  font-family: var(--ff-mono);
+  font-size: 0.57rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--y600);
+  background: oklch(68.1% 0.162 75.834 / 0.12);
+  border: 1px solid oklch(68.1% 0.162 75.834 / 0.2);
+  padding: 0.18rem 0.5rem;
+  border-radius: 2px;
+  margin-bottom: 0.5rem;
+}
+.gallery-item figcaption p {
+  font-size: 0.78rem;
+  color: var(--on-dark-dim);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Note */
+.gallery-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  margin-top: 1.5rem;
+  font-family: var(--ff-mono);
+  font-size: 0.63rem;
+  letter-spacing: 0.05em;
+  color: var(--t400);
+  line-height: 1.5;
+}
+.gallery-note svg { flex-shrink: 0; margin-top: 1px; }
+
+/* ================================================================
+   LIGHTBOX
+   ================================================================ */
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: oklch(0% 0 0 / 0.93);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  padding: 1rem;
+}
+.gallery-lightbox.open { opacity: 1; pointer-events: all; }
+
+.lightbox-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: min(90vw, 920px);
+  width: 100%;
+}
+.lightbox-inner img {
+  max-height: 74vh;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 3px;
+  box-shadow: 0 24px 80px oklch(0% 0 0 / 0.6);
+}
+.lightbox-caption {
+  margin-top: 0.85rem;
+  font-size: 0.82rem;
+  color: oklch(97% 0 0 / 0.55);
+  text-align: center;
+  line-height: 1.5;
+  padding: 0 1rem;
+}
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid oklch(97% 0 0 / 0.15);
+  background: oklch(97% 0 0 / 0.07);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+  z-index: 1;
+}
+.lightbox-close:hover { background: oklch(97% 0 0 / 0.18); }
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid oklch(97% 0 0 / 0.15);
+  background: oklch(97% 0 0 / 0.07);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.lightbox-nav:hover { background: oklch(97% 0 0 / 0.18); border-color: oklch(97% 0 0 / 0.3); }
+.lightbox-nav.prev { left: 1rem; }
+.lightbox-nav.next { right: 1rem; }
+
+/* ================================================================
+   RESPONSIVE
+   ================================================================ */
+@media (max-width: 768px) {
+  #video-media { padding: 3.5rem 0 3rem; }
+  #video-media .container { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .video-grid { grid-template-columns: 1fr; gap: 1.25rem; margin-top: 2rem; }
+  .video-info { padding: 0.9rem 1rem 1.1rem; }
+  .video-info h4 { font-size: 0.95rem; }
+  .video-info p  { font-size: 0.8rem; }
+  .gallery-wrap { margin-top: 3rem; padding-top: 2.5rem; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 0.85rem; }
+  .gallery-item figcaption p { font-size: 0.75rem; }
+}
+
+@media (max-width: 480px) {
+  #video-media { padding: 3rem 0 2.5rem; }
+  #video-media .container { padding-left: 1rem; padding-right: 1rem; }
+  .video-grid { gap: 1rem; }
+  .video-info { padding: 0.8rem 0.9rem 1rem; }
+  .video-info h4 { font-size: 0.9rem; }
+  .gallery-grid { grid-template-columns: 1fr; gap: 0.85rem; }
+  .gallery-title { font-size: 1.35rem; }
+  .gallery-desc { font-size: 0.82rem; }
+  .lightbox-nav { display: none; }
+  .lightbox-inner img { max-height: 62vh; }
+  .lightbox-caption { font-size: 0.75rem; }
+}

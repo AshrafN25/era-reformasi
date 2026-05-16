@@ -3,6 +3,36 @@
  * Micro-interactions: scroll progress, nav state, count-up, fade-in
  */
 
+/* ── 0. HAMBURGER MENU TOGGLE ── */
+const hamburger = document.querySelector('.nav-hamburger');
+const navLinks = document.querySelector('.nav-links');
+const navLinksItems = document.querySelectorAll('.nav-links a');
+
+// Toggle menu
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navLinks.classList.toggle('active');
+  document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+});
+
+// Close menu when clicking a link
+navLinksItems.forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navLinks.classList.remove('active');
+    document.body.style.overflow = '';
+  });
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('nav')) {
+    hamburger.classList.remove('active');
+    navLinks.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+});
+
 /* ── 1. SCROLL PROGRESS BAR ── */
 const progressBar = document.createElement('div');
 progressBar.className = 'scroll-progress';
@@ -24,7 +54,7 @@ function updateNav() {
 
 /* ── 3. ACTIVE NAV LINK — highlight current section ── */
 const sections   = Array.from(document.querySelectorAll('section[id]'));
-const navLinks   = Array.from(document.querySelectorAll('.nav-links a'));
+const navLinksAll   = Array.from(document.querySelectorAll('.nav-links a'));
 const indexItems = Array.from(document.querySelectorAll('.hero-index-list li'));
 
 function updateActiveNav() {
@@ -35,7 +65,7 @@ function updateActiveNav() {
     if (sec.offsetTop <= scrollMid) current = sec.id;
   });
 
-  navLinks.forEach(a => {
+  navLinksAll.forEach(a => {
     const href = a.getAttribute('href').replace('#', '');
     a.classList.toggle('active', href === current);
   });
@@ -246,3 +276,6 @@ const amandemenVisibleObserver = new IntersectionObserver(
 document.querySelectorAll('.amandemen-item, .prinsip-item, .otonomi-item').forEach(el => {
   amandemenVisibleObserver.observe(el);
 });
+
+
+

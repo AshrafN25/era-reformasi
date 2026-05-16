@@ -1,11 +1,11 @@
 ﻿/* ================================================================
    BAB 3: DAMPAK — Split screen 50/50 large text
    ================================================================ */
-#dampak { background: var(--s900); padding: 7rem 0; }
+#dampak { background: #f5f5f5; padding: 7rem 0; }
 #dampak .container-wide { padding: 0 2rem; }
-#dampak .section-heading { color: var(--y400); }
-#dampak .section-heading em { color: var(--n100); font-style: italic; }
-#dampak .lead-text { color: var(--on-dark-dim); }
+#dampak .section-heading { color: var(--y600, #b45309); }
+#dampak .section-heading em { color: var(--s900); font-style: italic; }
+#dampak .lead-text { color: var(--s700, #374151); }
 
 .dampak-cols {
   display: grid;
@@ -17,7 +17,7 @@
 
 .dampak-col { padding: 3rem 2.5rem; }
 .dampak-col.positif { background: oklch(38% 0.10 155 / 0.12); border-top: 3px solid var(--green); }
-.dampak-col.negatif { background: oklch(40% 0.12 22 / 0.12); border-top: 3px solid var(--red); border-left: 1px solid oklch(97% 0 0 / 0.05); }
+.dampak-col.negatif { background: oklch(40% 0.12 22 / 0.12); border-top: 3px solid var(--red); border-left: 1px solid oklch(20% 0 0 / 0.08); }
 
 .dampak-col h3 {
   font-family: var(--ff-display);
@@ -25,7 +25,7 @@
   font-weight: 600;
   margin-bottom: 1.75rem;
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid oklch(97% 0 0 / 0.08);
+  border-bottom: 1px solid oklch(20% 0 0 / 0.12);
 }
 .dampak-col.positif h3 { color: oklch(65% 0.14 155); }
 .dampak-col.negatif h3 { color: oklch(65% 0.14 22); }
@@ -33,9 +33,9 @@
 .dampak-col ul { list-style: none; }
 .dampak-col ul li {
   font-size: 0.92rem;
-  color: var(--on-dark-dim);
+  color: var(--s700, #374151);
   padding: 0.65rem 0;
-  border-bottom: 1px solid oklch(97% 0 0 / 0.06);
+  border-bottom: 1px solid oklch(20% 0 0 / 0.08);
   display: flex;
   gap: 0.75rem;
   line-height: 1.6;
