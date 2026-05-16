@@ -309,8 +309,7 @@
    RESPONSIVE
    ================================================================ */
 @media (max-width: 768px) {
-  #video-media { padding: 3.5rem 0 3rem; }
-  #video-media .container { padding-left: 1.25rem; padding-right: 1.25rem; }
+
   .video-grid { grid-template-columns: 1fr; gap: 1.25rem; margin-top: 2rem; }
   .video-info { padding: 0.9rem 1rem 1.1rem; }
   .video-info h4 { font-size: 0.95rem; }
@@ -321,8 +320,7 @@
 }
 
 @media (max-width: 480px) {
-  #video-media { padding: 3rem 0 2.5rem; }
-  #video-media .container { padding-left: 1rem; padding-right: 1rem; }
+ 
   .video-grid { gap: 1rem; }
   .video-info { padding: 0.8rem 0.9rem 1rem; }
   .video-info h4 { font-size: 0.9rem; }
